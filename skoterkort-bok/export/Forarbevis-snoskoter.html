@@ -1,0 +1,818 @@
+<!DOCTYPE html><html lang='sv'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Förarbevis snöskoter — Instruktörsverket</title>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link href='https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,650&display=swap' rel='stylesheet'>
+<style>:root {
+  --pine: #1f6b4a;
+  --moss: #3d8f62;
+  --ice: #eef8f2;
+  --paper: #fbfcf9;
+  --cream: #ffffff;
+  --ink: #243028;
+  --muted: #5f7068;
+  --copper: #d46a2e;
+  --gold: #d4a017;
+  --line: #d7e6dc;
+  --html-bg: #e8eee9;
+  --cover-bg: #f4faf6;
+  --cover-ink: #1f4d38;
+  --cover-title: #1f5c40;
+  --cover-sub: #4a6b5a;
+  --cover-visual-bg: #e8f2ec;
+  --cover-foot-bg: #eef6f1;
+  --shadow-border: #d8ddd6;
+  --shadow-glow: rgba(31,107,74,.08);
+  --hero-from: #e8f6ee;
+  --hero-to: #d4edde;
+  --hero-ink: #1f5c40;
+  --hero-ring: rgba(212,160,23,.22);
+  --h2-border: #dce8e1;
+  --th-bg: #3d8f62;
+  --remember-bg: #f8efe8;
+  --photo-stripe-a: #eef4f0;
+  --photo-stripe-b: #e4ece7;
+  --photo-border: #8aa396;
+  --page-footer: #5f7068;
+  --page-header: #8aa396;
+  --page-chapter: #1f6b4a;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--html-bg); }
+body {
+  margin: 0;
+  font-family: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  font-size: 17px;
+}
+.page-wrap { max-width: 820px; margin: 0 auto; background: var(--cream); box-shadow: 0 0 0 1px var(--shadow-border), 0 18px 50px var(--shadow-glow); }
+.cover {
+  min-height: 100vh;
+  background: var(--cover-bg);
+  color: var(--cover-ink);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cover-top {
+  padding: 2.2rem 3rem 1.3rem;
+  background: var(--cover-bg);
+}
+.cover-kicker {
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--moss);
+}
+.cover h1 {
+  font-size: 3.2rem;
+  line-height: 1.04;
+  font-weight: 650;
+  margin: 1rem 0 0;
+  max-width: 12ch;
+  color: var(--cover-title);
+}
+.cover .sub { font-size: 1.05rem; color: var(--cover-sub); margin: .7rem 0 0; }
+.cover-rule { width: 4.2rem; height: 3px; background: var(--gold); margin: 1rem 0 0; border: 0; }
+.cover-visual {
+  flex: 1;
+  background: var(--cover-visual-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  min-height: 340px;
+}
+.cover-visual img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+.cover-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.05rem 3rem 1.25rem;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: .85rem;
+  color: var(--cover-sub);
+  letter-spacing: .04em;
+  background: var(--cover-foot-bg);
+}
+.toc, .chapter, .endcard { padding: 2.6rem 3rem 3rem; }
+.toc h2, .endcard h1 { font-family: "Avenir Next", "Segoe UI", sans-serif; color: var(--pine); margin: 0 0 1.4rem; }
+.toc-list { list-style: none; padding: 0; margin: 0; }
+.toc-list li { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--line); font-family: "Avenir Next", "Segoe UI", sans-serif; }
+.toc-num { color: var(--gold); font-weight: 700; min-width: 2.2rem; }
+.toc-title { flex: 1; color: var(--pine); font-weight: 600; }
+.toc-deck { color: var(--muted); font-size: .86rem; font-weight: 400; display: block; margin-top: .15rem; }
+.toc-page { color: var(--muted); font-weight: 600; min-width: 2.2rem; text-align: right; font-variant-numeric: tabular-nums; }
+.hero {
+  background: linear-gradient(135deg, var(--hero-from) 0%, var(--hero-to) 100%);
+  color: var(--hero-ink);
+  padding: 1.8rem 1.7rem 1.5rem;
+  border-radius: 6px;
+  margin: 0 0 1.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  right: -40px; top: -40px;
+  width: 140px; height: 140px;
+  border: 18px solid var(--hero-ring);
+  border-radius: 50%;
+}
+.hero-kicker {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-size: .68rem;
+  color: var(--moss);
+}
+.hero h1 { font-size: 2rem; margin: .45rem 0 0; line-height: 1.15; }
+h2 {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--pine);
+  font-size: 1.22rem;
+  margin: 2rem 0 .7rem;
+  padding-bottom: .35rem;
+  border-bottom: 2px solid var(--h2-border);
+}
+h3 {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--moss);
+  font-size: 1.02rem;
+  margin: 1.4rem 0 .45rem;
+}
+p { margin: 0 0 .85rem; }
+strong { color: var(--pine); }
+a { color: var(--moss); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+ul, ol { margin: 0 0 1rem; padding-left: 1.2rem; }
+li { margin: .28rem 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.2rem;
+  font-size: .92rem;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+th { background: var(--th-bg); color: #fff; text-align: left; padding: .55rem .7rem; font-weight: 600; }
+td { padding: .5rem .7rem; border-bottom: 1px solid var(--line); }
+tr:nth-child(even) td { background: var(--ice); }
+.callout, .photo {
+  border-radius: 4px;
+  padding: .85rem 1rem .85rem 1.05rem;
+  margin: 1rem 0 1.2rem;
+  font-size: .98rem;
+}
+.callout {
+  background: var(--ice);
+  border-left: 5px solid var(--moss);
+  color: var(--pine);
+  font-style: italic;
+}
+.callout.remember { border-left-color: var(--copper); background: var(--remember-bg); }
+.photo {
+  background: repeating-linear-gradient(-45deg, var(--photo-stripe-a), var(--photo-stripe-a) 8px, var(--photo-stripe-b) 8px, var(--photo-stripe-b) 16px);
+  border: 1.5px dashed var(--photo-border);
+  color: var(--muted);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: .88rem;
+  font-style: normal;
+  text-align: center;
+  min-height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo-fig {
+  margin: 1.1rem 0 1.4rem;
+  padding: 1rem 1rem .85rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  text-align: center;
+}
+.photo-fig img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 480px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.photo-fig.sign img { max-height: 240px; width: auto; }
+.photo-fig figcaption {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: .82rem;
+  color: var(--muted);
+  margin: .7rem 0 0;
+}
+.sources-note {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: .8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: .6rem;
+  margin-top: 1.8rem;
+}
+.sources h1 { font-family: "Avenir Next", "Segoe UI", sans-serif; color: var(--pine); margin: 0 0 .4rem; }
+.sources .lead { color: var(--muted); font-size: .95rem; margin-bottom: 1.2rem; }
+.sources h2 { font-size: 1.02rem; margin: 1.3rem 0 .4rem; }
+.sources ul {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: .78rem;
+  line-height: 1.35;
+}
+.sources a { word-break: break-all; }
+.endcard {
+  background: linear-gradient(180deg, var(--cream), var(--ice));
+}
+.endcard .stamp {
+  display: inline-block;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .7rem;
+  color: var(--copper);
+  border: 1px solid var(--copper);
+  padding: .25rem .6rem;
+  margin-bottom: 1rem;
+}
+@media print {
+  html, body { background: white; }
+  body { font-size: 16px; line-height: 1.48; }
+  .page-wrap { box-shadow: none; max-width: none; }
+  .cover, .toc, .chapter, .endcard, .sources { page-break-after: always; padding: 0; }
+  .cover { min-height: 100vh; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cover-visual { min-height: auto; flex: 1; align-items: center; padding: .4rem 0; }
+  .cover-visual img { width: 100%; height: auto; max-height: 11.5cm; object-fit: contain; }
+  h2 { margin-top: 1.55rem; }
+  h3 { margin-top: 1.1rem; }
+  p { margin-bottom: .7rem; }
+  ul, ol { margin-bottom: .8rem; }
+  .photo-fig { margin: .9rem 0 1.1rem; padding: .6rem; }
+  .photo-fig img { width: 100%; max-height: 11cm; object-fit: contain; }
+  .photo-fig.sign img { max-height: 5.5cm; width: auto; }
+  .hero, th, tr:nth-child(even) td, .callout, .photo, .photo-fig { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@page { size: A4; margin: 19mm 14mm 19mm; }
+@page { @bottom-center { content: counter(page); font: 9.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5f7068; } }
+@page { @top-right { content: 'Förarbevis snöskoter · Instruktörsverket AB'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #8aa396; letter-spacing: .04em; } }
+@page cover { margin: 0; @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } }
+@page toc { @top-left { content: 'Innehåll'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.cover { page: cover; }
+.toc { page: toc; }
+@page kap00 { @top-left { content: 'Förord'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kap00 { page: kap00; }
+@page kap01 { @top-left { content: 'Kapitel 1 · Förare och fordon'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kap01 { page: kap01; }
+@page kap02 { @top-left { content: 'Kapitel 2 · Miljö, natur och hänsyn'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kap02 { page: kap02; }
+@page kap03 { @top-left { content: 'Kapitel 3 · Trafikregler'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kap03 { page: kap03; }
+@page kap04 { @top-left { content: 'Kapitel 4 · Straff, behörighet och försäkring'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kap04 { page: kap04; }
+@page kap05 { @top-left { content: 'Kapitel 5 · Trafiksäkerhet'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kap05 { page: kap05; }
+@page kap06 { @top-left { content: 'Kapitel 6 · Människan som förare'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kap06 { page: kap06; }
+@page kap07 { @top-left { content: 'Kapitel 7 · Olyckor och första hjälpen'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kap07 { page: kap07; }
+@page kap08 { @top-left { content: 'Kapitel 8 · Praktisk körning'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kap08 { page: kap08; }
+@page kap09 { @top-left { content: 'Inför kunskapsprovet'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kap09 { page: kap09; }
+@page kallor { @top-left { content: 'Källförteckning'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #1f6b4a; letter-spacing: .04em; } }
+.kallor { page: kallor; }</style></head><body><div class='page-wrap'>
+<section class="cover">
+          <div class="cover-top">
+            <div class="cover-kicker">Instruktörsverket AB · Tänndalen</div>
+            <h1>Förarbevis snöskoter</h1>
+            <hr class="cover-rule">
+            <p class="sub">Utbildningsmaterial</p>
+          </div>
+          <div class="cover-visual">
+            <img src="../assets/omslag-skoter.jpg" alt="Snöskoter på is vid Tänndalen">
+          </div>
+          <div class="cover-foot">
+            <span>Teori · praktik</span>
+            <span>Förarbevis snöskoter</span>
+          </div>
+        </section>
+<section class='toc'><h2>Innehåll</h2><ul class='toc-list'><li><span class="toc-num">1</span><span class="toc-title">Förare och fordon<span class="toc-deck">Maskinen, kläderna, kontrollen</span></span><span class="toc-page">4</span></li><li><span class="toc-num">2</span><span class="toc-title">Miljö, natur och hänsyn<span class="toc-deck">Spår, djur och avgaser</span></span><span class="toc-page">13</span></li><li><span class="toc-num">3</span><span class="toc-title">Trafikregler<span class="toc-deck">Skyltar, led och 20 km/h</span></span><span class="toc-page">18</span></li><li><span class="toc-num">4</span><span class="toc-title">Straff, behörighet och försäkring<span class="toc-deck">Vem får köra, vad som täcks</span></span><span class="toc-page">27</span></li><li><span class="toc-num">5</span><span class="toc-title">Trafiksäkerhet<span class="toc-deck">Fart, is, barn och stoppsträcka</span></span><span class="toc-page">31</span></li><li><span class="toc-num">6</span><span class="toc-title">Människan som förare<span class="toc-deck">Trötthet, alkohol, grupptryck</span></span><span class="toc-page">39</span></li><li><span class="toc-num">7</span><span class="toc-title">Olyckor och första hjälpen<span class="toc-deck">Vältning, chock, 112</span></span><span class="toc-page">44</span></li><li><span class="toc-num">8</span><span class="toc-title">Praktisk körning<span class="toc-deck">Körgård, ställning, fastkörd</span></span><span class="toc-page">50</span></li><li><span class="toc-num">Prov</span><span class="toc-title">Inför kunskapsprovet<span class="toc-deck">Legitimation, 16 år, boken undan</span></span><span class="toc-page">55</span></li><li><span class="toc-num"></span><span class="toc-title">Källförteckning<span class="toc-deck">Lagar, föreskrifter och riktlinjer per kapitel</span></span><span class="toc-page">57</span></li></ul></section>
+<section class='chapter kap00'><div class='hero'><div class='hero-kicker'>Välkommen</div><h1>Förord</h1></div><p><strong>Instruktörsverket AB</strong> Tänndalen</p>
+<p>Det här är kursboken för förarbevis snöskoter. Du har den med under teorin och praktiken. När kunskapsprovet börjar lägger du undan den.</p>
+<p>Utbildningen ska ge dig kunskap, färdighet och attityd så att du kör med gott omdöme mot människor, fordon, natur och säkerhet.</p>
+<h2>Dagen</h2>
+<table>
+<tr><th>Pass</th><th>Innehåll</th><th>Kapitel</th></tr>
+<tr><td>Förmiddag</td><td>Fordon, miljö, regler, försäkring</td><td>1–4</td></tr>
+<tr><td>Eftermiddag</td><td>Säkerhet, människan, olyckor</td><td>5–7</td></tr>
+<tr><td>Körgård</td><td>Praktisk körning</td><td>8</td></tr>
+<tr><td>Avslut</td><td>Kunskapsprov inför examinator</td><td>—</td></tr>
+</table>
+<h2>Så använder du boken</h2>
+<p>Läs det kapitel ni tar upp. Skyltar och checklistor är till för att slå upp.</p>
+<h2>Ta med</h2>
+<ul><li>Giltig legitimation</li><li>Varma kläder i lager</li><li>Hjälm</li></ul>
+<h2>Ålder</h2>
+<p>Du ska ha fyllt 16 år för att skriva kunskapsprovet. Den praktiska körningen får du börja med från 15 år och 9 månader, men bara under utbildningen.</p></section>
+<section class='chapter kap01'><div class='hero'><div class='hero-kicker'>Kapitel 1 · Maskinen, kläderna, kontrollen</div><h1>Förare och fordon</h1></div><p>God fordonskännedom gör det lättare att upptäcka fel före start och att hantera skotern säkert under körning. Kapitlet behandlar skotertyper, reglage, drivmatta, skyddsutrustning, last och kontroll före körning.</p>
+<p>Efter kapitlet ska du kunna:</p>
+<ul><li>känna igen vanliga skotertyper och deras användningsområden</li><li>peka ut huvuddelar och reglage</li><li>förklara hur nödstopp och nödstoppslina fungerar</li><li>välja drivmatta och utrustning efter underlag och användning</li><li>klä dig och använda lämplig skyddsutrustning</li><li>lasta säkert och hantera extra bränsle</li><li>genomföra en kontroll före körning</li></ul>
+<h2>Olika typer av snöskoter</h2>
+<p>En snöskoter är juridiskt en terrängskoter — ett terrängmotorfordon med en tjänstevikt på högst 450 kilogram — som är avsedd för färd på snötäckt mark och försedd med band och medar. Konstruktionen varierar beroende på om skotern främst är avsedd för led, lössnö, fjäll eller arbete.</p>
+<p><strong>Touring</strong> är byggd för bekväm ledkörning och har ofta plats för passagerare och packning.</p>
+<p><strong>Sport</strong> är vanligen lätt och kvick, med egenskaper anpassade för aktiv körning på led.</p>
+<p><strong>Mountain</strong> är byggd för djup lössnö. Den har normalt lång matta, höga kammar och smalare spårvidd än en ledskoter.</p>
+<p><strong>Crossover</strong> kombinerar egenskaper för led och lösare snö.</p>
+<p><strong>Arbetsskoter</strong> har ofta bred eller lång matta, låg utväxling och god dragförmåga för exempelvis släde, skogsarbete eller ledpreparering.</p>
+<p>Skotern ska väljas efter underlag, last och uppgift. En utpräglad lössnömatta kan få hög belastning och stort slitage på hård led, medan en kortare matta med låga kammar ger sämre bärighet i djup snö.</p>
+<figure class="photo-fig"><img src="../assets/skotertyper.png" alt="Fem skotertyper. Lägg märke till mattans längd, kamhöjden och spårvidden."><figcaption>Fem skotertyper. Lägg märke till mattans längd, kamhöjden och spårvidden.</figcaption></figure>
+<h2>Huvuddelar</h2>
+<p>Fram sitter <strong>styrskidorna</strong>. Under skidorna finns <strong>styrstål</strong>, som ger styrgrepp på hård snö och is. <strong>Huven</strong> täcker motorrummet.</p>
+<p>På <strong>styret</strong> sitter normalt gasreglage, bromsreglage, nödstopp, ljusreglage och värmereglage. <strong>Fotstöden</strong> ger stöd när föraren sitter, står eller flyttar kroppsvikten.</p>
+<p>Bakom sätet finns <strong>tunneln</strong>. Under den arbetar bakfjädringen och <strong>drivmattan</strong>. Längst bak finns baklyse och ofta fästen för last eller släde.</p>
+<figure class="photo-fig"><img src="../assets/skoterns-delar.png" alt="Snöskoterns huvuddelar."><figcaption>Snöskoterns huvuddelar.</figcaption></figure>
+<p>Kylsystemet skiljer sig mellan modeller. Många vätskekylda skotrar har värmeväxlare i tunneln och behöver snö som drivmattan kastar upp för effektiv kylning. Fläktkylda modeller fungerar på ett annat sätt. Låg snömängd, blankis eller hårdpackat underlag kan därför ge överhettning eller ökat slitage på vissa modeller. Följ temperaturindikering och instruktionsbok; stanna och undersök orsaken vid varning.</p>
+<p>Skidornas inställning ska kontrolleras enligt tillverkarens mått. En skida som står tydligt snett, onormalt styrmotstånd eller slag i styret kan tyda på fel som ska åtgärdas före körning.</p>
+<p>Under huven kontrollerar du enligt instruktionsboken bland annat olja, kylvätska och att inga ledningar, skydd eller kåpor är lösa eller skadade.</p>
+<figure class="photo-fig"><img src="../assets/skoter-motor.png" alt="Under huven. Kontrollera olja, kylvätska och att kåpor och ledningar sitter fast."><figcaption>Under huven. Kontrollera olja, kylvätska och att kåpor och ledningar sitter fast.</figcaption></figure>
+<h2>Reglage</h2>
+<p>På förarplatsen ska du kunna hitta och använda:</p>
+<ul><li><strong>gasreglaget</strong></li><li><strong>bromsreglaget</strong></li><li><strong>nödstoppet</strong></li><li>start- och stoppfunktionerna</li><li>ljusreglagen</li></ul>
+<p>Gasreglaget sitter normalt vid höger handtag. När det släpps ska det återgå snabbt och fullständigt till tomgångsläget. Kör inte om reglaget går trögt eller fastnar.</p>
+<p>Bromsreglaget sitter oftast vid vänster handtag. Bromsen ska ta tydligt och utan onormalt lång reglageväg.</p>
+<p>Före start ska nödstoppslinan vara rätt ansluten, gasreglaget <strong>helt släppt</strong> och området framför och bakom skotern fritt.</p>
+<figure class="photo-fig"><img src="../assets/skoter-reglage.png" alt="Reglagen på styret: broms, ljus, värme, gas, nödstopp, nödstoppslina och start/stopp."><figcaption>Reglagen på styret: broms, ljus, värme, gas, nödstopp, nödstoppslina och start/stopp.</figcaption></figure>
+<h2>Nödstopp och nödstoppslina</h2>
+<p><strong>Nödstoppslinan</strong> fästs i föraren enligt tillverkarens anvisning. Om föraren faller av dras kontakten loss och motorn stängs av. Drivningen upphör, men skotern kan fortsätta rulla eller glida en sträcka beroende på fart, lutning och underlag. Linan är inte ett säkerhetsbälte.</p>
+<p><strong>Nödstoppet</strong> stänger också av motorn och ska vara lätt att nå.</p>
+<h3>Om gasreglaget fastnar</h3>
+<p>Om gasreglaget fastnar under körning:</p>
+<ol><li>aktivera nödstoppet eller dra loss nödstoppslinan</li><li>bromsa kontrollerat</li><li>styr om möjligt mot en säker plats</li></ol>
+<p>Försök inte hålla emot full motorkraft enbart med bromsen. Om gasreglaget kärvar vid kontrollen före start ska skotern inte användas förrän felet är avhjälpt.</p>
+<p>Den största risken när gasreglaget kärvar är att snöskotern <strong>skenar okontrollerat</strong>.</p>
+<h2>Drivmatta, kamhöjd och bärighet</h2>
+<p>Drivmattans kammar överför motorkraften till underlaget. Greppet beror inte bara på kamhöjden. Mattans längd och bredd avgör kontaktytan och därmed bärigheten, och snötyp, last och skoterns vikt påverkar framkomligheten.</p>
+<p>Kamhöjden anges i millimeter, ofta också i tum eftersom mattorna tillverkas efter amerikanska mått. Mattillverkarna delar in dem ungefär så här:</p>
+<ul><li><strong>Ledmattor, 25–38 mm (1–1,5 tum).</strong> Standard på touring- och arbetsskotrar. En Ski-Doo Grand Touring levereras till exempel med 32 mm kam. Låga kammar ger minst slitage, lägst bränsleförbrukning och minst tendens att &quot;skjuta&quot; i kurvor på hård led. Den lägsta höjden, omkring 25 mm, har samtidigt minst greppyta och är därför det sämsta valet när skotern ska dra tung släde på hårdpackad led: mattan slirar när belastningen ökar.</li><li><strong>Crossover-mattor, 38–50 mm (1,5–2 tum).</strong> För den som växlar mellan led och lössnö. Mer drag i mjuk snö, något högre förbrukning.</li><li><strong>Lössnömattor, 50 mm och uppåt (2–3,2 tum).</strong> Gjorda för djup snö och branta backar. På hård led flexar kammarna och blir varma, vilket ger sämre stabilitet, snabbare slitage och högre bränsleförbrukning.</li></ul>
+<p>Tumregeln från tillverkarna är: kör du mer än hälften av tiden på led ska du välja den lägre kamhöjden. Följ alltid skoter- och mattillverkarens gränser för kamhöjd och hastighet, och kontrollera att en högre kam får plats i tunneln.</p>
+<figure class="photo-fig"><img src="../assets/kamhojd.png" alt="Jämförelse av kamhöjd på drivmattor: 25, 39 och 75 mm."><figcaption>Jämförelse av kamhöjd på drivmattor: 25, 39 och 75 mm.</figcaption></figure>
+<h3>Slirskydd</h3>
+<p>Slirskydd, exempelvis fabriksmonterade greppinsatser eller dubb, kan förbättra acceleration och bromsning på is och hårdpackad snö. De förändrar samtidigt skoterns styrning och belastningen på drivmattan.</p>
+<p>Montera endast en lösning som är godkänd eller rekommenderad för den aktuella skotern och mattan. Kontrollera frigång mot tunnel, kylare och andra delar samt om tunnelskydd krävs. Fel längd, antal eller placering kan skada mattan eller skotern. Kontrollera även lokala regler och ledägarens villkor. På barmark och andra känsliga ytor kan slirskydd orsaka skada; sådan körning ska undvikas.</p>
+<p>Isrivare är en annan utrustning. De river upp snö och is som kan kyla värmeväxlare och smörja slides på hårt underlag. Användning och begränsningar, bland annat vid backning, framgår av skoterns eller utrustningens instruktioner.</p>
+<h2>Variatorn</h2>
+<p>Skotern överför motorkraften genom ett <strong>variatorsystem</strong> med primärvariator, sekundärvariator och variatorrem. Systemet ändrar utväxlingen steglöst.</p>
+<p>Variatorremmen är en slitdel. Felaktig belastning, slirning eller fel inställning kan skada den. Låt motorn vara avstängd, ta ur nyckeln och följ instruktionsboken vid kontroll eller byte. Variatorskyddet ska vara monterat före start.</p>
+<p>På längre turer är extra variatorrem och spade viktig utrustning. Ta även med karta och kompass. GPS eller telefon är ett komplement eftersom batteri och täckning kan svikta.</p>
+<h2>Hjälm och skyddsutrustning</h2>
+<p>Förare och passagerare på snöskoter utan karosseri ska använda skyddshjälm. Passagerare under sju år får använda annat lämpligt huvudskydd. Föraren ansvarar för att passagerare under femton år använder föreskrivet huvudskydd.</p>
+<p>Hjälmen ska passa, vara rätt knäppt och ge tillräcklig sikt. Visir eller glasögon skyddar mot fartvind, snö och föremål.</p>
+<p>Efter hjälmen är <strong>ryggskyddet</strong> det viktigaste extra skyddet. Vid en vältning eller ett fall bakåt är det ryggen som tar smällen. Rejäla stövlar, handskar och visir eller glasögon hör också till grundutrustningen. Skydden ska passa körningen och får inte hindra rörelser eller reglagehantering.</p>
+<h2>Kläder och kyla</h2>
+<p>Fartvinden ökar kroppens värmeförlust. Klä dig därför i flera lager:</p>
+<ol><li>ett fukttransporterande lager närmast kroppen</li><li>ett isolerande lager av exempelvis ull eller fleece</li><li>ett vind- och vattenavvisande ytterlager</li></ol>
+<p>Undvik plagg som sitter så hårt att blodcirkulationen eller isoleringen försämras. Skydda särskilt händer, fötter och ansikte. Vita, stela eller känsellösa hudpartier kan vara tecken på kylskada. Sök skydd, byt våta kläder och värm försiktigt; gnugga inte det skadade området och använd inte alkohol som uppvärmning.</p>
+<h2>Last och extra bränsle</h2>
+<p>Last påverkar tyngdpunkt, bromssträcka och styrförmåga. Följ skoterns, lastbärarens och slädens angivna last- och kultrycksgränser. Placera lasten lågt, fördela den jämnt och surra den så att den inte kan förskjutas, falla av eller nå drivmattan. Lösa bandändar får inte kunna dras in i mattan.</p>
+<h3>Extra bränsle</h3>
+<p>Ta bara med den minsta mängd extra bränsle som behövs för den planerade turen och en rimlig säkerhetsmarginal. Mer bränsle innebär mer vikt och större brand- och läckagerisk.</p>
+<p>MSB:s regler för privat transport av brandfarlig vätska sätter de yttre gränserna: högst 60 liter per behållare och högst 240 liter totalt på fordonet. Det är lagens tak, inte en rekommendation. I praktiken är det skoterns lastgräns och vad du kan surra fast säkert som avgör hur mycket du kan ta med.</p>
+<p>Använd täta, hela behållare som är avsedda och godkända för bensin. Behållare över fem liter bör vara typgodkända enligt gällande transportregler. Fäst dem upprätt och skyddat från värme, slag och nötning. Tanka med avstängd motor, på säker plats och utan tändkällor. Kontrollera också eventuella villkor från uthyrare, transportör, ledägare eller räddningstjänst.</p>
+<h3>Snöskoter på släp</h3>
+<p>När skotern transporteras på släpvagn ska den säkras i alla riktningar med avsedda fästpunkter och utrustning med tillräcklig kapacitet. Använd inte delar som kan deformeras, exempelvis plastkåpor eller styre. Kontrollera surrningen efter en kort körsträcka.</p>
+<h2>Kontroll före körning</h2>
+<p>Gör kontrollen före varje körning och följ instruktionsboken:</p>
+<ul><li><strong>gasreglage</strong> — går lätt och återgår helt</li><li><strong>broms</strong> — tar tydligt och utan läckage</li><li><strong>drivmatta och fjädring</strong> — inga synliga skador eller fastfrusna delar</li><li><strong>styrning och skidor</strong> — fria och utan uppenbara fel</li><li><strong>belysning och reflexer</strong> — hela och rena</li><li><strong>nödstopp och nödstoppslina</strong> — fungerar</li><li><strong>bränsle, olja och kylvätska</strong> — rätt nivå enligt modell</li><li><strong>last och draganordning</strong> — säkrade och inom tillåtna gränser</li></ul>
+<p>Efter start gör du en provbromsning i låg fart på fri yta.</p>
+<h2>Inför turen</h2>
+<p>Kontrollera väder, ledstatus och isinformation. Meddela färdväg och beräknad återkomst till någon som inte deltar i turen. Anpassa reservdelar, spade, första hjälpen, kommunikation och navigationsutrustning efter sträcka och område.</p>
+<p class="sources-note">Källor till kapitlet finns i källförteckningen längst bak i boken. Kontrollerade 18 september 2026.</p></section>
+<section class='chapter kap02'><div class='hero'><div class='hero-kicker'>Kapitel 2 · Spår, djur och avgaser</div><h1>Miljö, natur och hänsyn</h1></div><p>Snöskoterkörning påverkar mark, växtlighet, djur och människor genom bland annat buller, avgaser och spårbildning. Föraren behöver därför kunna skilja mellan vad lagen förbjuder, vad markägaren tillåter och vilka lokala regler som gäller.</p>
+<p>Efter kapitlet ska du kunna:</p>
+<ul><li>beskriva hur service och körsätt påverkar utsläpp och buller</li><li>anpassa körningen för att minska störning och markskada</li><li>förklara reglerna för barmark, ungskog och jordbruksmark</li><li>förstå skillnaden mellan allemansrätt, markägarens tillstånd och offentliga regler</li><li>agera lämpligt vid renar och annat vilt</li><li>kontrollera lokala föreskrifter, områdesskydd och aktuell ledstatus</li></ul>
+<h2>Terrängkörning och allemansrätt</h2>
+<p>Körning med snöskoter ingår <strong>inte</strong> i allemansrätten. Allemansrätten är icke-motoriserad och ger ingen generell rätt att köra på någon annans mark.</p>
+<p>Två frågor måste hållas isär:</p>
+<ol><li><strong>Terrängkörningslagstiftningen och lokala föreskrifter</strong> anger var körning är förbjuden eller begränsad.</li><li><strong>Rätten att använda marken</strong> beror på markägarens medgivande eller på att markägaren har visat var körning är tillåten, exempelvis genom en upplåten skoterled.</li></ol>
+<p>Att terrängkörningslagen inte förbjuder en viss färd betyder alltså inte automatiskt att föraren har rätt att använda marken. Markägarens tillstånd upphäver inte heller ett lagstadgat förbud, en lokal föreskrift eller reglerna för ett skyddat område.</p>
+<h2>Motorer, buller och avgaser</h2>
+<p>Snöskotrar har vanligen tvåtakts- eller fyrtaktsmotor. Motorernas utsläpp och ljudnivå beror på konstruktion, ålder, skick och användning. Moderna tvåtaktsmotorer kan exempelvis ha direktinsprutning och ska inte bedömas på samma sätt som äldre förgasarmotorer.</p>
+<p>Följ tillverkarens serviceintervall och använd föreskrivet bränsle, motorolja och tändstift. Felaktig inställning, slitna delar eller bristande service kan öka bränsleförbrukning, utsläpp och buller. Avgassystemet får inte ändras så att skotern inte längre uppfyller gällande krav.</p>
+<p>Undvik längre tomgång än vad uppvärmning och säker drift kräver. Det bästa sättet att begränsa utsläppen under färd är att <strong>köra varsamt och planera körningen</strong>: välj färdväg i förväg, accelerera kontrollerat och håll jämn fart. Det minskar bränsleförbrukning, utsläpp, bullertoppar och slitage.</p>
+<figure class="photo-fig"><img src="../assets/avgaser-service.png" alt="En välservad motor röker och låter mindre än en sliten."><figcaption>En välservad motor röker och låter mindre än en sliten.</figcaption></figure>
+<h2>Hänsyn vid körning</h2>
+<p>Anpassa fart och färdsätt så att människor och djur inte störs i onödan och så att skada på mark och växtlighet undviks. Detta krav gäller även där körningen i övrigt är tillåten.</p>
+<p>Det som stör djuren mest är plötsliga ljudtoppar. Du stör djurlivet minst genom att <strong>undvika kraftiga accelerationer</strong> och hålla jämn fart. Låg fart hjälper, men inte om du rycker i gasen.</p>
+<p>I närheten av bostäder, stugor, skidspår och rastplatser bör du:</p>
+<ul><li>sänka farten i god tid</li><li>undvika kraftiga accelerationer</li><li>hålla avstånd till människor och djur</li><li>stänga av motorn vid längre uppehåll</li><li>följa skyltar, ledanvisningar och lokala hastighetsgränser</li></ul>
+<h2>Djurliv</h2>
+<p>Vilda djur har begränsade energireserver under vintern. Upprepade störningar eller förföljande kan tvinga dem att förbruka energi och lämna viktiga områden.</p>
+<p>Om du ser vilt ska du sänka farten, hålla avstånd och stanna om det behövs. Försök inte driva undan djuret med skotern. Välj en annan färdväg när det kan göras säkert och lagligt.</p>
+<h3>Renar och renskötsel</h3>
+<p>Renar är tamdjur och renskötseln är en skyddad näring. En skoter kan splittra en hjord och försvåra samling, flyttning och bete.</p>
+<p>När renar finns på eller nära leden:</p>
+<ul><li>stanna på tillräckligt avstånd</li><li>stäng av motorn om väntan blir längre</li><li>följ anvisningar från renskötare, ledvärd eller myndighet</li><li>vänd och ta en tillåten omväg</li><li>kör inte genom en samlad hjord</li></ul>
+<p>Tillfälliga avstängningar kan införas vid rensamling eller flyttning. Kontrollera därför aktuell information före turen.</p>
+<figure class="photo-fig"><img src="../assets/renar-omvag.png" alt="Stanna, vänd och ta en tillåten omväg. Kör aldrig genom en renhjord."><figcaption>Stanna, vänd och ta en tillåten omväg. Kör aldrig genom en renhjord.</figcaption></figure>
+<h2>Nationella regler för marken</h2>
+<h3>Barmark</h3>
+<p>Körning med motordrivet fordon i terräng på barmark är som huvudregel förbjuden för annat ändamål än jordbruk eller skogsbruk. I terrängkörningsförordningen finns särskilda undantag för vissa arbets- och samhällsuppgifter. Vanlig nöjeskörning omfattas inte av dessa undantag.</p>
+<p>Marken räknas som barmark om snötäcket är så tunt eller löst att fordonet kommer i kontakt med marken.</p>
+<h3>Plant- och ungskog</h3>
+<p>På snötäckt skogsmark med plant- eller ungskog är körning förbjuden om det inte är uppenbart att den kan ske utan risk för skada på skogen. Terrängkörningsförordningen anger att bestämmelsen avser plant- eller ungskog vars medelhöjd över snötäcket är lägre än två meter.</p>
+<p>Små plantor kan vara helt dolda av snö. Använd därför upplåtna leder och kör inte in i en föryngring enbart för att plantorna inte syns.</p>
+<p>Terrängkörningslagen tillåter alltså körning på snötäckt skogsmark när snötäcket är tillräckligt, körningen inte riskerar att skada mark eller skog och inget förbud gäller. Men lagen svarar bara på frågan om skada. Rätten att använda annans mark är en annan fråga: snöskoterkörning ingår inte i allemansrätten, så du behöver markägarens tillstånd eller en upplåten led.</p>
+<h3>Jordbruksmark</h3>
+<p>På snötäckt jordbruksmark är körning förbjuden om det inte är uppenbart att den kan ske utan risk för skada på marken. En frusen yta eller ett tunt snölager är inte i sig ett bevis på att körningen är riskfri. Vall, gröda och dränering kan skadas.</p>
+<h3>Skyddad natur</h3>
+<p>Nationalparker och naturreservat har egna föreskrifter. Reglerna varierar mellan områden och kan innebära totalförbud, krav på led eller tidsbegränsningar. Kontrollera beslut och karta hos länsstyrelsen eller den myndighet som förvaltar området.</p>
+<h2>Regleringsområden och lokala regler</h2>
+<p>I delar av fjällområdet finns statliga regleringsområden. I vissa är allmän skoterkörning helt förbjuden; i andra får den endast ske på allmän skoterled eller enligt särskilda undantag. Därutöver kan kommunen eller länsstyrelsen besluta om lokala trafikföreskrifter och andra begränsningar inom sina respektive ansvarsområden.</p>
+<p>Föraren behöver före turen kontrollera:</p>
+<ul><li>länsstyrelsens karta och föreskrifter för regleringsområden</li><li>föreskrifter för naturreservat och nationalparker</li><li>kommunens lokala trafikföreskrifter</li><li>markägarens eller ledägarens villkor</li><li>tillfälliga avstängningar och aktuell ledstatus</li></ul>
+<h2>Funäsfjällen och Tänndalen</h2>
+<p>Funäsfjällen, där Tänndalen ingår, ligger inom ett reglerat skoterområde. Enligt den lokala information som kontrollerades den 18 september 2026 får allmänheten köra på markerade skoterleder och inom anvisade friåkningsområden. Körning utanför dessa områden är inte tillåten för allmänheten.</p>
+<p>Lederna är avgiftsbelagda och <strong>Fjällpass Skoter</strong> krävs per skoter enligt Funäsfjällens Ledbolags villkor. Passet ersätter inte förarbevis, markregler eller andra rättsliga krav.</p>
+<p>Kör endast på leder som är öppna. Leder kan stängas på grund av exempelvis snöbrist, höga vattenflöden, jakt, renskötsel eller vårförbud. Kontrollera öppen eller stängd status samma dag i appen <strong>Spår &amp; Leder Funäsfjällen</strong> eller på Funäsfjällens Ledbolags webbplats. En tryckt karta visar sträckningen men inte alltid aktuella avstängningar.</p>
+<h2>Kontroll före turen</h2>
+<ol><li>Är färdvägen upplåten av markägaren eller ledägaren?</li><li>Finns regleringsområde, områdesskydd eller lokal föreskrift?</li><li>Är leden öppen i dag?</li><li>Är snötäcket tillräckligt för att mark och växtlighet inte ska skadas?</li><li>Passerar färden ungskog, jordbruksmark, bostäder eller renbetesområde?</li><li>Är skotern servad och lasten ordnad så att buller, utsläpp och spill begränsas?</li></ol>
+<p class="sources-note">Källor till kapitlet finns i källförteckningen längst bak i boken. Kontrollerade 18 september 2026.</p></section>
+<section class='chapter kap03'><div class='hero'><div class='hero-kicker'>Kapitel 3 · Skyltar, led och 20 km/h</div><h1>Trafikregler</h1></div><p>Trafikförordningen innehåller regler för trafik både på väg och i terräng. Som snöskoterförare behöver du kunna avgöra vilket område du kör i, följa anvisningar och anpassa färden till andra trafikanter.</p>
+<p>Efter kapitlet ska du kunna:</p>
+<ul><li>skilja mellan terräng, väg och is</li><li>redogöra för undantagen som medger kort färd på annan väg än enskild väg</li><li>tillämpa reglerna om stopp, passagerare och 20 km/h vid sådan färd</li><li>känna igen vanliga märken och ledmarkeringar</li><li>tillämpa mötes- och väjningsregler i terräng</li><li>hitta lokala trafikföreskrifter och aktuell information</li></ul>
+<h2>Terräng, väg och is</h2>
+<p>I förordningen om vägtrafikdefinitioner är <strong>terräng</strong> ett område som inte är väg.</p>
+<p>Begreppet <strong>väg</strong> omfattar bland annat en väg, gata, ett torg eller en annan led eller plats som allmänt används för trafik med motorfordon. Det omfattar också leder som är ordnade för cykeltrafik samt gång- eller ridbanor intill en väg. Det är platsens funktion och användning, inte enbart beläggningen eller vem som äger marken, som avgör om den är väg.</p>
+<p>En skoterled som går genom naturen är normalt terräng, inte väg. En parkeringsyta kan däremot vara väg om den allmänt används för motorfordonstrafik.</p>
+<p><strong>Is på vatten räknas inte som terräng.</strong> Det innebär inte att körning alltid är tillåten eller säker. Lokala trafikföreskrifter, områdesskydd, ledvillkor och andra bestämmelser kan gälla, och föraren ansvarar alltid för att bedöma isens bärighet.</p>
+<h2>Snöskoter på väg</h2>
+<p>En terrängskoter får som huvudregel inte köras på andra vägar än enskilda vägar. Trafikförordningen medger två viktiga undantag:</p>
+<ul><li>Om du behöver korsa en väg som inte är enskild får du köra på vägen den <strong>kortaste lämpliga sträckan</strong>.</li><li>Du får också färdas på vägen när det är <strong>nödvändigt med hänsyn till terrängförhållandena</strong>, exempelvis för att passera ett hinder där färd i terrängen inte är möjlig.</li></ul>
+<p>Undantagen ger inte rätt att använda vägen som vanlig färdväg när terrängkörning är möjlig.</p>
+<p>På väg får en snöskoter aldrig köras fortare än <strong>20 km/h</strong>, eftersom den är ett bandfordon. På annan väg än en enskild väg som endast i mindre omfattning används av allmänheten får passagerare inte tas med på skotern eller i ett kopplat fordon.</p>
+<p>Vid en korsning av en allmän väg ska passagerare därför kliva av före vägen och gå över. Föraren ska köra över ensam.</p>
+<p>En förare som kör ut från terrängen ska <strong>stanna innan färden går ut på vägen</strong> och lämna företräde åt trafikanterna på vägen. Välj en plats med god sikt och korsa utan onödigt dröjsmål.</p>
+<p>På enskild väg kan vägens ägare begränsa motortrafik genom exempelvis vägmärke eller bom. Kontrollera dessutom om lokala trafikföreskrifter gäller.</p>
+<h2>Korsning med järnväg</h2>
+<p>Den som ska korsa järnväg eller spårväg ska vara särskilt försiktig och anpassa hastigheten så att fordonet kan stannas före korsningen. Kör inte in om:</p>
+<ul><li>ett tåg eller en spårvagn närmar sig</li><li>röd signal visas, ljudsignal hörs eller en bom fälls, är fälld eller reses</li><li>det finns risk att du måste stanna i korsningen</li></ul>
+<p>Stanna på betryggande avstånd när korsningen inte får passeras. Passera sedan utan onödigt dröjsmål. Att låta passagerare kliva av före korsningen är en lämplig säkerhetsrutin och kan krävas av kursarrangör eller ledägare, men de särskilda reglerna för järnväg ska alltid följas.</p>
+<h2>Grundregler i trafiken</h2>
+<p>Alla trafikanter ska visa omsorg och varsamhet. En terrängtrafikant ska dessutom anpassa färdväg, hastighet och färdsätt så att människor och djur inte störs i onödan och så att skada på annans mark eller växtlighet undviks.</p>
+<p>En skyltad högsta hastighet är ett tak. Farten ska alltid vara så låg att du behåller kontrollen och kan stanna inom den sträcka du kan överblicka. Sikt, underlag, kurvor, krön, människor, djur och mötande trafik kan kräva betydligt lägre fart.</p>
+<h2>Vägmärken och anvisningar</h2>
+<p>Vägmärken gäller även snöskoterförare när märket är tillämpligt. Anvisningar genom vägmärke, signal eller tecken av behörig person gäller före generella trafikregler.</p>
+<p>Vanliga huvudgrupper är:</p>
+<ul><li><strong>varningsmärken</strong>, oftast triangelformade med röd ram</li><li><strong>väjningspliktsmärken</strong>, exempelvis väjningsplikt och stopplikt</li><li><strong>förbudsmärken</strong>, oftast runda med röd ram</li><li><strong>påbudsmärken</strong>, runda och blå</li><li><strong>anvisningsmärken</strong>, oftast fyrkantiga</li></ul>
+<figure class="photo-fig sign"><img src="../assets/vagmarken-former.png" alt="De fem huvudgrupperna av vägmärken."><figcaption>De fem huvudgrupperna av vägmärken.</figcaption></figure>
+<h2>Märken att känna igen</h2>
+<h3>Lämplig färdväg för snöskoter</h3>
+<figure class="photo-fig sign"><img src="../assets/marke-lamplig-skoterled.png" alt="Lämplig färdväg för snöskoter (F31)."><figcaption>Lämplig färdväg för snöskoter (F31).</figcaption></figure>
+<p>Lokaliseringsmärket <strong>F31</strong> med snöskotersymbol visar en väg eller förbifart som är lämplig för snöskoter. Märket är inte i sig ett påbud att följa leden. Körning utanför leden kan däremot vara förbjuden av terrängkörningslagen, områdesföreskrifter, markägarens villkor eller andra regler.</p>
+<h3>Påbjuden led för terrängmotorfordon</h3>
+<figure class="photo-fig sign"><img src="../assets/marke-pabjuden-skoterled.png" alt="Påbjuden led för terrängmotorfordon (D9). Här måste du följa leden."><figcaption>Påbjuden led för terrängmotorfordon (D9). Här måste du följa leden.</figcaption></figure>
+<p>Det runda blå märket D9 anger att terrängmotorfordon ska föras på leden. Om märket avser ett visst slags terrängmotorfordon anges det på en tilläggstavla.</p>
+<p>Du är skyldig att följa den påbjudna leden; körning med terrängmotorfordon utanför leden är förbjuden. Märket medger gångtrafik. Annan trafik är förbjuden om inget annat anges.</p>
+<h3>Lokal information om is och vatten</h3>
+<figure class="photo-fig sign"><img src="../assets/marke-is-egen-risk.png" alt="Exempel på lokal informationsskylt. Den är inget vägmärke och säger ingenting om hur isen bär."><figcaption>Exempel på lokal informationsskylt. Den är inget vägmärke och säger ingenting om hur isen bär.</figcaption></figure>
+<p>Skyltar med texten &quot;körning på is sker på egen risk&quot; kan förekomma lokalt, men de är inte nationella vägmärken och betyder inte att leden är en skoterled. Skylten är ingen garanti för bärigheten. Kontrollera lokal isinformation och gör en egen säkerhetsbedömning. Förhållandena kan ändras snabbt vid strömmande vatten, sund, broar och in- eller utlopp.</p>
+<h3>Förbud mot gångtrafik</h3>
+<figure class="photo-fig sign"><img src="../assets/marke-forbud-gang-skidor.png" alt="Förbud mot gångtrafik (C15). Gäller även skidåkare."><figcaption>Förbud mot gångtrafik (C15). Gäller även skidåkare.</figcaption></figure>
+<p>Förbudsmärket C15 gäller gångtrafik. Trafikförordningens bestämmelser om gående gäller även den som åker skidor, så förbudet omfattar också skidåkare. Det är inte ett förbudsmärke för snöskoter. Läs alltid eventuella tilläggstavlor och andra märken på samma plats.</p>
+<h3>Olämplig färdväg</h3>
+<figure class="photo-fig sign"><img src="../assets/marke-olamplig-led.png" alt="Olämplig färdväg för snöskoter. Inte förbjudet, men välj en annan väg."><figcaption>Olämplig färdväg för snöskoter. Inte förbjudet, men välj en annan väg.</figcaption></figure>
+<p>Märket upplyser om att färdvägen inte är lämplig för snöskoter. Om körningen är förbjuden framgår det av förbudsmärke eller annan gällande föreskrift.</p>
+<h3>Förbud mot terrängmotorfordon</h3>
+<figure class="photo-fig sign"><img src="../assets/marke-forbud-skoter.png" alt="Förbud mot trafik med terrängmotorfordon (C13)."><figcaption>Förbud mot trafik med terrängmotorfordon (C13).</figcaption></figure>
+<p>Förbudsmärket C13 anger förbud mot trafik med terrängmotorfordon och terrängsläp. Om förbudet inte gäller terrängvagn anges det på en tilläggstavla.</p>
+<h2>Ledmarkering och röda kryss</h2>
+<p>Röda kryss markerar en <strong>vinterled</strong>. De visar ledens sträckning men innebär inte ensamma att leden är upplåten för snöskoter. Vinterleden kan användas av exempelvis skidåkare, gående och hundspann.</p>
+<figure class="photo-fig sign"><img src="../assets/ledkryss-roda.png" alt="Rött ledkryss: en vinterled, men inte automatiskt en skoterled."><figcaption>Rött ledkryss: en vinterled, men inte automatiskt en skoterled.</figcaption></figure>
+<p>För att avgöra om skoterkörning är tillåten ska du kontrollera skotermärke, tilläggstavlor, områdets föreskrifter, ledkarta och aktuell ledstatus. Ett ledkryss kan vara kompletterat med ett påbuds- eller anvisningsmärke för skoter.</p>
+<figure class="photo-fig sign"><img src="../assets/ledkryss-tva-marken.png" alt="Ledkryss och påbudsmärke D9 på samma stolpe: här är vinterleden skoterled, och du ska följa den."><figcaption>Ledkryss och påbudsmärke D9 på samma stolpe: här är vinterleden skoterled, och du ska följa den.</figcaption></figure>
+<h2>Hastighet</h2>
+<p>I terräng är högsta tillåtna hastighet <strong>70 km/h utanför tättbebyggt område</strong> och <strong>50 km/h inom tättbebyggt område</strong>, om inte en annan lägre gräns gäller. På väg får en snöskoter som bandfordon köras i högst <strong>20 km/h</strong>.</p>
+<p>Lokala hastighetsgränser kan gälla på leder och inom särskilda områden. Anpassningsregeln gäller oavsett skyltad gräns.</p>
+<h2>Möte och väjning i terräng</h2>
+<p>Det är missvisande att sammanfatta all ledkörning med uttrycket ”högertrafik”. Följ i stället de regler som gäller för situationen:</p>
+<ul><li><strong>Vid möte mellan fordon</strong> ska fordonen hållas till höger och förarna lämna betryggande avstånd i sidled.</li><li><strong>När två fordons kurser skär varandra</strong> har föraren väjningsplikt mot fordonet som närmar sig från höger, om inte skyltning eller en särskild regel anger annat.</li><li>Den som har väjningsplikt ska i god tid sänka farten eller stanna och får fortsätta endast om det kan ske utan fara eller hinder.</li><li>I terräng har en förare väjningsplikt mot <strong>gående</strong>.</li></ul>
+<p>Trafikförordningens bestämmelser om gående gäller också den som åker skidor, skridskor eller liknande samt den som för, leder, skjuter eller drar en sparkstötting eller liknande fordon. En snöskoterförare ska därför lämna gående och skidåkare företräde i terräng.</p>
+<p>Hundspann och andra fordon omfattas inte automatiskt av regeln om gående. Vid möte eller korsande färdvägar gäller tillämpliga fordonsregler, skyltning och det allmänna kravet på omsorg och varsamhet. Sänk farten tidigt och ge ekipaget tillräckligt utrymme.</p>
+<p>Håll avstånd till framförvarande och parkera inte där sikten är skymd eller där leden blockeras.</p>
+<h2>Lokala regler</h2>
+<p><strong>Kommunens lokala trafikföreskrifter</strong> kan ändra hastighetsgränser och införa förbudsområden för snöskoter. Ska du köra in i en annan kommun är det alltså den kommunens lokala trafikföreskrifter du ska slå upp. De finns samlade i <strong>Svensk trafikföreskriftssamling (STFS)</strong> och ofta på kommunens webbplats. För regleringsområden och skyddad natur ska du även kontrollera länsstyrelsens beslut och kartor.</p>
+<p>En skoterklubbs karta eller app är ett viktigt praktiskt hjälpmedel, men ersätter inte vägmärken och gällande föreskrifter. Kontrollera också om en led är tillfälligt stängd.</p>
+<h2>Körning i Norge och Finland</h2>
+<p>Regler om behörighet, registrering, försäkring, leder och markägarens tillstånd skiljer sig mellan länderna och ändras då och då. Lär dig reglerna för det land du ska köra i innan du åker, inte på plats.</p>
+<p>Kontrollera aktuella regler hos de norska respektive finländska myndigheterna och fråga ditt försäkringsbolag vilka handlingar du behöver ha med och vilket skydd som gäller. Gör kontrollen nära avresan.</p>
+<h2>Vapen på snöskoter</h2>
+<p>Enligt <strong>22 § jaktförordningen (1987:905)</strong> får skjutvapen inte medföras vid färd med motordrivet fordon i terräng. Bestämmelsen innehåller särskilt angivna undantag, bland annat för viss tjänsteutövning och vissa tillstånd eller jaktsituationer.</p>
+<p>Om ett skjutvapen förvaras i ett motordrivet fortskaffningsmedel får ammunition inte finnas i vapnets patronläge eller magasin. Den som behöver transportera vapen ska läsa hela bestämmelsen och eventuellt beslut om undantag; en viss typ av väska eller placering skapar inte i sig ett undantag.</p>
+<h2>Sammanfattning</h2>
+<ul><li>Terräng är ett område som inte är väg; is på vatten räknas inte som terräng.</li><li>På annan väg än enskild väg får snöskoter bara köras i de angivna undantagsfallen.</li><li>Vid sådan vägkörning gäller normalt högst 20 km/h och förbud mot passagerare.</li><li>Stanna innan du kör ut från terräng på väg och lämna vägtrafiken företräde.</li><li>Vid fordonsmöte: håll till höger och lämna säkert sidavstånd.</li><li>Vid korsande fordonskurser gäller högerregeln om inget annat anges.</li><li>Gående och skidåkare ska lämnas företräde i terräng.</li><li>Röda kryss visar vinterled men är inte ensamma ett besked om att skoterkörning är tillåten.</li></ul>
+<p class="sources-note">Källor till kapitlet finns i källförteckningen längst bak i boken. Kontrollerade 18 september 2026.</p></section>
+<section class='chapter kap04'><div class='hero'><div class='hero-kicker'>Kapitel 4 · Vem får köra, vad som täcks</div><h1>Straff, behörighet och försäkring</h1></div><p>Snöskotern är ett motordrivet fordon. Föraren behöver rätt behörighet och ägaren måste se till att reglerna om registrering och trafikförsäkring följs. Överträdelser kan få betydelse både straffrättsligt och för körkort eller körkortstillstånd.</p>
+<p>Efter kapitlet ska du kunna:</p>
+<ul><li>ange vem som får köra snöskoter</li><li>beskriva när trafikförsäkring krävs och vad den täcker</li><li>skilja mellan olaglig narkotikaanvändning och läkemedel som används enligt ordination</li><li>ge exempel på följder av trafikbrott och andra regelöverträdelser</li></ul>
+<h2>Vem får köra?</h2>
+<p>För att köra snöskoter i Sverige ska du i regel:</p>
+<ul><li>ha fyllt <strong>16 år</strong></li><li>ha <strong>förarbevis för snöskoter</strong></li></ul>
+<p>Den som tog ett svenskt körkort eller traktorkort <strong>före den 1 januari 2000</strong> får köra snöskoter utan särskilt förarbevis. Ett körkort eller traktorkort som togs senare ger inte den rätten vid vanlig, självständig körning.</p>
+<h3>Skotersafari</h3>
+<p>Den som har körkort eller traktorkort får köra inom organiserad turistverksamhet, så kallad skotersafari, om samtliga följande villkor är uppfyllda:</p>
+<ul><li>gruppen består av högst <strong>tio förare</strong></li><li>färden leds av en person som har förarbevis för snöskoter</li><li>färden går längs en sträcka som ledaren har bestämt i förväg</li></ul>
+<p>Ett AM-körkort kan alltså ge rätt att köra under dessa särskilda förutsättningar, men ersätter inte förarbevis vid annan skoterkörning.</p>
+<h3>Utbildning, prov och kort</h3>
+<p>De praktiska delarna i utbildningen får påbörjas från <strong>15 år och 9 månader</strong> hos en godkänd utbildare. Privat övningskörning är inte tillåten. Kunskapsprovet får göras tidigast vid <strong>16 års ålder</strong>.</p>
+<p>Efter ett godkänt kunskapsprov får du köra när resultatet har registrerats hos Transportstyrelsen, om du har giltig legitimation med dig. Efter <strong>två månader</strong> måste du ha med själva förarbeviset när du kör.</p>
+<p>Förarbeviset ska färdigställas enligt Transportstyrelsens anvisningar, bland annat med foto, namnteckning och betalning. Om underlaget inte har kommit in inom <strong>ett år</strong> från det godkända provet upphör rätten att köra med stöd av provet.</p>
+<p>Att köra utan den behörighet som krävs kan bedömas som <strong>olovlig körning</strong>. Det kan också påverka möjligheten att få eller behålla andra körkortsbehörigheter.</p>
+<h2>Trafikförsäkring</h2>
+<p>En snöskoter som är registrerad i vägtrafikregistret och <strong>påställd</strong> ska ha trafikförsäkring, även om den för tillfället inte används. Försäkringen ska gälla från den dag försäkringsplikten börjar, till exempel när en ny ägare registreras eller när ett avställt fordon ställs på.</p>
+<p>Det är normalt ägaren som ska teckna försäkringen. Vid kreditköp med återtagandeförbehåll, eller när någon hyr eller leasar skotern i minst ett år, är det i stället innehavaren. Saknar en påställd skoter försäkring tar Trafikförsäkringsföreningen, TFF, ut en <strong>trafikförsäkringsavgift för varje oförsäkrad dag</strong>. Avgiften är ingen försäkring, den är normalt dyrare än en vanlig premie och den tas ut även om skotern står stilla.</p>
+<p>En snöskoter som är <strong>avställd</strong> i vägtrafikregistret behöver inte vara trafikförsäkrad så länge den inte används. Ett avställt fordon får inte köras. Ska skotern användas måste den först ställas på och ha trafikförsäkring från påställningsdagen.</p>
+<h3>Vad försäkringen täcker</h3>
+<p>Trafikförsäkringen kan ersätta:</p>
+<ul><li>personskador på förare, passagerare och andra personer</li><li>skador som skotern orsakar på någon annans fordon eller annan egendom</li></ul>
+<p>Den ersätter normalt inte skador på den egna snöskotern. Skydd för exempelvis stöld, brand eller vagnskada kräver ett mer omfattande försäkringsskydd och beror på försäkringsvillkoren.</p>
+<p>Om ett oförsäkrat fordon orsakar en skada kan TFF ersätta den skadelidande. Ägare eller förare kan därefter, beroende på omständigheterna, bli skyldig att betala belopp till TFF. Följderna är alltså inte begränsade till trafikförsäkringsavgiften.</p>
+<h2>Alkohol, narkotika och läkemedel</h2>
+<p>Gränsen för rattfylleri är <strong>0,2 promille alkohol i blodet</strong>, eller motsvarande alkoholkoncentration i utandningsluften. Rattfylleri och grovt rattfylleri kan leda till böter eller fängelse samt till körkortsingripande. Den säkra regeln är att inte köra efter att ha druckit alkohol.</p>
+<p>För narkotika gäller i huvudsak en nollgräns i trafiken: den som kör ett motordrivet fordon med ett narkotiskt ämne kvar i blodet efter olagligt intag kan dömas för rattfylleri. Olagligt bruk eller innehav kan också vara narkotikabrott.</p>
+<p>Narkotikaklassade läkemedel som har ordinerats av läkare eller annan behörig receptutfärdare omfattas av ett ordinationsundantag när de används enligt ordination. Det betyder inte att körning alltid är tillåten. En förare kan dömas för rattfylleri om ett ordinerat läkemedel — eller ett läkemedel som inte är narkotikaklassat — har gjort personen så påverkad att körningen är trafikfarlig. Använd endast egna läkemedel enligt ordination och kör inte om reaktion, uppmärksamhet, omdöme eller samordning är nedsatt.</p>
+<h2>Andra överträdelser och följder</h2>
+<ul><li><strong>Olovlig körning:</strong> körning utan föreskriven behörighet.</li><li><strong>Hastighetsöverträdelse:</strong> körning över gällande hastighetsgräns, även på skoterled där en gräns är utmärkt eller annars gäller.</li><li><strong>Otillåten terrängkörning:</strong> körning i områden eller under förhållanden där terrängkörningsregler eller lokala föreskrifter förbjuder färd.</li><li><strong>Rattfylleri:</strong> körning efter alkoholintag över straffbar gräns eller under straffbar påverkan av narkotika eller annat medel.</li></ul>
+<p>Följden beror på vilken regel som överträtts och på omständigheterna. Böter, fängelse, återkallelse av körkort eller förarbevis och spärrtid för framtida körkort kan bli aktuella. Exakta påföljder avgörs i det enskilda fallet.</p>
+<h2>Vid en kontroll</h2>
+<p>Polisen kan kontrollera förarens identitet och behörighet samt fordonets registrerings-, påställnings- och försäkringsuppgifter. Under de första två månaderna efter att ett godkänt prov har registrerats ska föraren kunna legitimera sig. Därefter ska förarbeviset medföras vid körning.</p>
+<div class="callout remember"><strong>Kom ihåg:</strong> Huvudregeln är 16 år och förarbevis. En påställd, registrerad snöskoter ska vara trafikförsäkrad. En avställd skoter behöver inte vara försäkrad men får inte användas.</div>
+<p class="sources-note">Källor till kapitlet finns i källförteckningen längst bak i boken. Kontrollerade 18 september 2026.</p></section>
+<section class='chapter kap05'><div class='hero'><div class='hero-kicker'>Kapitel 5 · Fart, is, barn och stoppsträcka</div><h1>Trafiksäkerhet</h1></div><p>Säker snöskoterkörning bygger på anpassad hastighet, goda säkerhetsmarginaler och vägval som tar hänsyn till sikt, underlag, last, väder och förarens förmåga. Förhållandena kan förändras snabbt, även på en välkänd led.</p>
+<p>Efter kapitlet ska du kunna:</p>
+<ul><li>förklara hur hastigheten påverkar reaktions-, broms- och stoppsträcka</li><li>beskriva hur passagerare, last och släde påverkar körningen</li><li>redogöra för en säker vägkorsning</li><li>göra en grundläggande go/no-go-bedömning inför färd på is och i lavinterräng</li><li>tillämpa grundprinciper för körning i skrå och backar</li></ul>
+<h2>Förutseende körning</h2>
+<p>Förutseende körning innebär att upptäcka risker tidigt och anpassa körningen innan en kritisk situation uppstår. Sänk hastigheten före kurvor, backkrön, möten och platser där människor eller djur kan finnas. Håll ett avstånd som ger utrymme för både reaktion och inbromsning.</p>
+<p>Gör en kort riskbedömning före turen:</p>
+<ul><li>Vilket väder, underlag och ljus väntas?</li><li>Finns vägpassager, vattendrag, lavinterräng eller områden med begränsad sikt?</li><li>Passar färdväg och tempo gruppens minst erfarna förare?</li><li>Finns bränsle, reservutrustning, kommunikation och en plan om turen måste avbrytas?</li></ul>
+<h2>Hastighet, reaktion och stopp</h2>
+<p><strong>Stoppsträcka</strong> är summan av <strong>reaktionssträcka</strong> och <strong>bromssträcka</strong>.</p>
+<ul><li>Reaktionssträckan är sträckan från det att föraren upptäcker faran tills inbromsningen börjar.</li><li>Bromssträckan är sträckan från det att bromsningen börjar tills fordonet står stilla.</li></ul>
+<p>Reaktionssträckan ökar ungefär proportionellt med hastigheten. Vid dubbla hastigheten blir reaktionssträckan ungefär dubbelt så lång, om reaktionstiden är densamma.</p>
+<p>Bromssträckan ökar i en idealiserad beräkning med hastigheten i kvadrat. <strong>Dubbel hastighet ger därför ungefär fyra gånger så lång bromssträcka</strong>, om övriga förhållanden är oförändrade.</p>
+<h3>Räkneexempel</h3>
+<p>Om bromssträckan är 15 meter vid 30 km/h blir den cirka 60 meter vid 60 km/h med samma grepp:</p>
+<p>15 × 2² = 60 meter</p>
+<p>Siffrorna är ett räkneexempel. På snö och is varierar den verkliga bromssträckan kraftigt med underlag, lutning, styrstål, drivmatta, bromsteknik, maskinens skick, last, passagerare och släde.</p>
+<figure class="photo-fig"><img src="../assets/bromsstracka-dubbel-fart.png" alt="Dubbel fart ger fyra gånger så lång bromssträcka."><figcaption>Dubbel fart ger fyra gånger så lång bromssträcka.</figcaption></figure>
+<h3>Älg 20 meter framför skotern</h3>
+<p>Vid <strong>60 km/h</strong> rör sig skotern cirka 17 meter per sekund. Med en reaktionstid på en sekund har du hunnit nästan 17 meter innan du ens börjar bromsa. Kommer en älg ut <strong>20 meter</strong> framför dig hinner du inte stanna; du har i bästa fall ett par meter kvar att bromsa på.</p>
+<p>Lägg ihop reaktionssträckan med bromssträckan från räkneexemplet ovan:</p>
+<p>17 m + 60 m ≈ 77 meter</p>
+<p>I körkortsutbildningen räknar man ofta med friktionstalet 0,3 på snö. Då blir bromssträckan vid 60 km/h 60² / (250 × 0,3) = 48 meter och stoppsträckan cirka 65 meter. På blank is (friktionstal 0,1) blir enbart bromssträckan över 140 meter. Hur du än räknar behöver du alltså <strong>tre till fyra gånger så långt som de 20 meterna</strong> för att stanna, och fri sikt minst så långt fram som din stoppsträcka.</p>
+<h2>Sikt, mörker och underlag</h2>
+<p>I mörker och nederbörd minskar möjligheten att upptäcka hinder i tid. Anpassa hastigheten så att du kan stanna inom den sträcka du säkert kan överblicka. Öka avståndet till framförvarande.</p>
+<p>Efter en stund i hög hastighet kan hastigheten upplevas som lägre än den är, så kallad fartblindhet. Kontrollera hastighetsmätaren och bedöm fortlöpande om farten är lämplig.</p>
+<p>Vanliga risker är:</p>
+<ul><li>isiga partier på preparerad eller hårdpackad led</li><li>lös snö som påverkar bärighet, styrning och kylning</li><li>dolda diken, bäckar, stenar och branter</li><li>mötande trafik efter kurvor och backkrön</li><li>spårbildning som kan påverka skoterns riktning</li></ul>
+<h2>Passagerare, barn och last</h2>
+<p>Passagerare och last förändrar skoterns viktfördelning: <strong>bromssträckan blir längre</strong> och skotern blir tyngre och <strong>svårare att svänga</strong> i kurvor. Följ alltid skoterns instruktionsbok om tillåten last och passagerare. Informera passageraren om hur hen ska sitta och hålla sig samt hur ni kommunicerar under färden. Anpassa hastigheten och undvik tvära manövrer.</p>
+<p>Ett litet barn åker säkrast i en <strong>skoterpulka tillsammans med en vuxen</strong>, i en pulka som är gjord för persontransport. Barnet ska ha hjälm eller annat lämpligt huvudskydd och sitta skyddat från fartvind och kyla.</p>
+<p>Ett barn ska inte placeras framför föraren eller styret. Vid en kollision eller kraftig inbromsning kan barnet klämmas mellan föraren och styret, och barnet kan också påverka reglagen.</p>
+<p>Vid färd med skoterpulka ska pulkan och kopplingen vara avsedda för ändamålet, lasten säkras och hastigheten anpassas. Se till att avgaser inte kan ledas in eller samlas i pulkan. Alla passagerare ska använda lämpligt huvudskydd enligt gällande regler.</p>
+<p>Vid färd på is får ett kapell eller annan utrustning inte hindra snabb utrymning om pulkan går igenom. Följ gällande regler vid vägpassage; passagerare får inte sitta kvar på skotern eller i släpfordonet när vägen korsas.</p>
+<h2>Skrå, backar och släde</h2>
+<p>Skotermodeller och underlag reagerar olika. Körteknik ska läras praktiskt under ledning av utbildare och anpassas till maskinens instruktionsbok. Råden nedan är generella principer, inte en ersättning för praktisk utbildning.</p>
+<h3>Körning på skrå</h3>
+<p>Vid körning på skrå behöver föraren normalt flytta kroppsvikten <strong>upp mot sluttningen</strong> för att motverka vältning. Välj en linje med utrymme, låg följdrisk och möjlighet att avbryta. Undvik brantare skrå än förare, maskin och förhållanden medger. Kroppsplacering, stående eller sittande körning och styrteknik kan variera med maskintyp och ska följa instruktörens och tillverkarens anvisningar.</p>
+<h3>Halt nedför</h3>
+<p>På halt underlag kan ett låst drivband göra att skotern sladdar och styrförmågan minskar. <strong>Ett svagt gaspådrag kan i vissa situationer hålla drivbandet i rörelse</strong> och bidra till styrförmågan. Det ska användas kontrollerat; kraftigt gaspådrag ökar hastigheten och risken.</p>
+<p>Planera farten före backen, använd mjuka reglage och följ maskinens instruktionsbok och utbildarens teknik. Föraren behöver ofta anpassa vikten bakåt i nedförslut, men exakt kroppsställning beror på maskin, lutning och underlag.</p>
+<h3>Släde i nedförsbacke</h3>
+<p>En släde ökar ekipagets massa och längd. Hård inbromsning i en brant nedförsbacke kan medföra att släden skjuter på och ekipaget viker sig, så kallad fällknivseffekt. Sänk hastigheten före backen, bromsa mjukt och tidigt och följ tillverkarens gränser för släpvikt och koppling.</p>
+<figure class="photo-fig"><img src="../assets/skra-nedfor-fallkniv.png" alt="Skrå: vikten upp mot sluttningen. Halt nedför: lite gas håller mattan rullande. Släde: hård bromsning i nedförsbacke kan vika ekipaget."><figcaption>Skrå: vikten upp mot sluttningen. Halt nedför: lite gas håller mattan rullande. Släde: hård bromsning i nedförsbacke kan vika ekipaget.</figcaption></figure>
+<h2>Korsa en väg</h2>
+<p>En snöskoter får inte användas för vanlig färd på väg, men en väg får korsas där reglerna medger det. Genomför korsningen så här:</p>
+<ol><li>Välj om möjligt en plats med god sikt åt båda håll och utan hinder på andra sidan.</li><li>Låt samtliga passagerare stiga av skotern och släpfordonet.</li><li>Stanna <strong>helt</strong> före vägbanan.</li><li>Kontrollera att vägen är fri och att hela ekipaget kan komma över utan att stanna.</li><li>Korsa vägen rakt, kort och under full kontroll. Anpassa gasen för jämn framdrivning; försök inte lösa dåligt fäste genom hög ansatsfart.</li><li>Låt passagerarna stiga på först när hela ekipaget har lämnat vägen och står säkert.</li></ol>
+<p>Synlig asfalt är den största risken vid en vägkorsning: mattan får dåligt fäste, skidorna styr sämre och skotern kan <strong>fastna och bli stående mitt på vägen</strong>. Asfalten sliter dessutom på skidor, styrstål och drivmatta. Går det inte att korsa kontrollerat, välj en annan plats.</p>
+<h2>Is och vattendrag</h2>
+<p>Naturis är föränderlig och kan ha stora lokala variationer. Skoterspår, markerad led eller tidigare trafik visar inte att isen bär. Isdubbar, räddningslina och flythjälp förbättrar möjligheten att överleva och hjälpa andra, men <strong>ingen utrustning bevisar att isen är säker</strong>.</p>
+<h3>Go/no-go före färd</h3>
+<p>Avstå från färden om du inte kan få ett tillräckligt tillförlitligt underlag för beslutet. Kontrollera:</p>
+<ul><li>aktuell officiell och lokal information om isläge, avstängningar och varningar</li><li>väderutveckling, temperatur, nederbörd och vattenstånd</li><li>om sjön är reglerad eller om färdvägen passerar sund, inlopp, utlopp, råkar, broar, bryggor, vass eller andra kända svagheter</li><li>om den planerade vägen kan följas utan att gå nära öppet vatten eller okända partier</li><li>om gruppen har rätt utrustning, kunskap, kommunikation och reservplan</li></ul>
+<p><strong>Okänd is ska behandlas som osäker.</strong> En allmän uppgift om istjocklek gäller inte automatiskt längs hela färdvägen. Lokal information kan vara inaktuell; förhållandena ska bedömas för den aktuella platsen och tiden. Vid tveksamhet: välj landväg eller avstå.</p>
+<h3>Grupp och utrustning</h3>
+<ul><li>Kör inte ensam.</li><li>Håll ett genomtänkt avstånd mellan skotrarna så att inte flera belastar samma svaga område eller kör ner i samma vak. Avståndet ska samtidigt medge uppsikt och hjälp.</li><li>Bär isdubbarna högt runt halsen, nära hakan och lätt åtkomliga, inte i fickan eller packningen. Följ produktens anvisningar.</li><li>Medför kast- eller räddningslina så att hjälp kan ges på avstånd.</li><li>Använd lämplig flythjälp, exempelvis flytoverall eller flytväst enligt produktens användningsområde.</li><li>Förvara telefon eller kommunikationsutrustning vattenskyddat och ha möjlighet att ange position.</li><li>Planera i förväg vem som larmar, vem som använder linan och hur gruppen undviker att fler går igenom.</li></ul>
+<h3>Om du går igenom isen</h3>
+<ol><li>Försök behålla lugnet och kontrollera andningen.</li><li>Vänd dig mot det håll du kom från; där bar isen nyss.</li><li>Använd isdubbarna, arbeta dig upp horisontellt och sparka med benen.</li><li>Fördela vikten genom att åla eller rulla bort från vaken innan du reser dig.</li><li>Ta dig till värme och torra kläder. Ring <strong>112</strong> vid akut fara, nedkylning, skada eller om någon saknas.</li></ol>
+<p>Den som hjälper ska hålla avstånd från vakens kant, fördela sin vikt och använda lina eller annat förlängande hjälpmedel. Gå inte fram så att även räddaren hamnar i vattnet.</p>
+<figure class="photo-fig"><img src="../assets/isdubbar.png" alt="Isdubbarna ska hänga runt halsen, högt och lätta att få tag i. Inte i fickan."><figcaption>Isdubbarna ska hänga runt halsen, högt och lätta att få tag i. Inte i fickan.</figcaption></figure>
+<h2>Laviner och fjäll</h2>
+<p>Lavinfara finns i och nedanför brant, snötäckt terräng. Kontrollera aktuell prognos på Lavinprognoser.se och väderinformation före färden, och följ prognosens råd för det aktuella området.</p>
+<p>Ett grundläggande sätt att minska risken är att undvika sluttningar som är <strong>brantare än 30 grader</strong>. Bedöm också terrängen ovanför och intill färdvägen. Du kan träffas av en lavin utan att själv befinna dig på den branta sluttningen:</p>
+<ul><li><strong>utloppsområden</strong> är platser nedanför där lavinen kan fortsätta</li><li><strong>terrängfällor</strong>, exempelvis raviner, sänkor, bäckfåror, träd och stenar, kan öka begravningsdjupet eller skadornas allvar</li><li>hängdrivor och branta sluttningar ovanför leden kan innebära risk</li></ul>
+<p>En markerad skoterled är <strong>inte en garanti mot laviner</strong>. Om rutten går i, under eller nära lavinterräng krävs aktuell bedömning och ett säkert vägval.</p>
+<p>I lavinterräng:</p>
+<ul><li>exponera endast <strong>en person i taget</strong> i ett riskområde</li><li>stanna och samla gruppen på säkra platser, inte i utloppsområden</li><li>håll uppsikt över den som passerar</li><li>låt varje person bära en sändande lavinsändare på kroppen samt egen sond och spade</li><li>genomför funktionskontroll före turen och träna regelbundet på kamraträddning</li></ul>
+<p>Lavinutrustning minskar inte sannolikheten att utlösa en lavin och ersätter inte terrängval, prognos eller utbildning. Den som saknar kunskap för att bedöma terrängen ska välja en färdväg utanför lavinterräng eller anlita kvalificerad ledare.</p>
+<h3>Om en lavin går</h3>
+<p>Säkra först din egen position och markera den punkt där den drabbade senast sågs. Inled kamraträddning omedelbart. Oskadade deltagare ställer sina lavinsändare i sökläge, söker, sonderar och gräver fram huvud och luftväg först. Ring 112 utan att fördröja det omedelbara sökandet. Följ den metod ni har tränat på; avsnittet ersätter inte praktisk kamraträddningsutbildning.</p>
+<h2>Planera turen</h2>
+<ul><li>Lämna färdplan och beräknad återkomsttid till en kontaktperson.</li><li>Anpassa gruppstorlek, väg och tempo till förhållandena.</li><li>Medför karta och kompass och kunna använda dem även om telefon eller GPS slutar fungera.</li><li>Ta med utrustning för kyla, första hjälpen, enklare reparation och bärgning.</li><li>Avbryt eller vänd i tid när väder, sikt, underlag, bränsle eller gruppens förmåga försämras.</li></ul>
+<div class="callout remember"><strong>Kom ihåg:</strong> Dubbel hastighet ger ungefär fyra gånger bromssträckan under samma antaganden. Vid vägkorsning: fullständigt stopp, fri väg och en kort, kontrollerad passage. Utrustning gör varken is eller lavinterräng säker.</div>
+<p class="sources-note">Källor till kapitlet finns i källförteckningen längst bak i boken. Kontrollerade 18 september 2026.</p></section>
+<section class='chapter kap06'><div class='hero'><div class='hero-kicker'>Kapitel 6 · Trötthet, alkohol, grupptryck</div><h1>Människan som förare</h1></div><p>Förarens uppmärksamhet, omdöme och beslutsförmåga är avgörande för säkerheten. Trötthet, stress, alkohol, andra droger, läkemedel och sjukdom kan försämra körförmågan, ibland innan föraren själv uppfattar förändringen.</p>
+<p>Efter kapitlet ska du kunna:</p>
+<ul><li>förklara hur erfarenhet och riskmedvetenhet påverkar körningen</li><li>beskriva hur stress, trötthet och sjukdom kan försämra körförmågan</li><li>redogöra för riskerna med alkohol, andra droger och läkemedel</li><li>känna igen kolmonoxidförgiftning och agera säkert</li><li>hantera grupptryck och avstå från körning när förutsättningarna inte är säkra</li></ul>
+<h2>Erfarenhet och självinsikt</h2>
+<p>Erfarenhet kan hjälpa en förare att känna igen riskmönster och anpassa hastighet eller vägval tidigare. Reaktionssnabbhet kan inte kompensera för att en fara upptäcks för sent.</p>
+<p>Bristande erfarenhet kan leda till felbedömning av fart, lutning, avstånd, underlag eller den egna förmågan. Även en erfaren förare kan överskatta sin förmåga, särskilt på en välkänd sträcka eller efter flera turer utan incidenter.</p>
+<p>Säker körning kräver fortlöpande självbedömning:</p>
+<ul><li>Är min kunskap tillräcklig för terrängen och maskinen?</li><li>Har jag marginal för ett oväntat möte eller hinder?</li><li>Påverkas mitt beslut av tidspress eller av gruppen?</li><li>Bör jag sänka hastigheten, välja en annan väg eller avstå?</li></ul>
+<h2>Syn, uppmärksamhet och stress</h2>
+<p>Synen ger en stor del av den information som behövs för körningen. Blicken ska föras långt fram och användas för att söka efter hinder, mötande trafik och förändringar i underlaget.</p>
+<p>Vid hög fart eller stress kan uppmärksamheten smalna av. Föraren kan missa information vid sidan av färdvägen och fatta sämre beslut. Fartblindhet innebär att en hög hastighet efter en stund kan upplevas som lägre än den är.</p>
+<p>Tidspress, dålig sikt, kyla, telefoner och oro för att tappa gruppen tar uppmärksamhet från körningen. Minska belastningen genom att stanna på en säker plats, lösa problemet och fortsätta först när du kan koncentrera dig på färden.</p>
+<h2>Trötthet</h2>
+<p>Trötthet kan försämra uppmärksamhet, reaktionstid, omdöme, samordning och förmåga att fatta beslut. Tidiga tecken kan vara:</p>
+<ul><li>upprepade gäspningar eller tunga ögonlock</li><li>svårighet att hålla jämn fart och färdlinje</li><li>missade skyltar, avtagsvägar eller delar av färden</li><li>irritation, rastlöshet eller ovanligt långsamma beslut</li></ul>
+<p>Kyla, fysisk ansträngning, mörker, monotoni och lång körtid kan öka tröttheten. Kaffe, frisk luft eller en kort paus kan ge en tillfällig känsla av pigghet men ersätter inte sömn. Om du inte är tillräckligt alert ska du stanna säkert och avstå från fortsatt körning tills du är återhämtad.</p>
+<h2>Alkohol</h2>
+<p>Alkohol kan försämra omdöme, reaktionsförmåga, uppmärksamhet, syn och samordning samt öka risktagandet. Gränsen för rattfylleri är <strong>0,2 promille alkohol i blodet</strong>, eller motsvarande koncentration i utandningsluften, men körförmågan kan påverkas redan före den straffbara gränsen.</p>
+<p>Alkohol är den enskilt största riskfaktorn i dödsolyckor med snöskoter. Under lång tid var omkring <strong>70 procent av de omkomna alkoholpåverkade</strong>; i senare undersökningar är det drygt hälften, och då ofta med mycket höga halter, i genomsnitt runt 1,9 promille. De flesta av dessa olyckor sker på helger, i mörker och på kortare turer i terräng föraren känner till.</p>
+<p>Utgångspunkten för säker körning är <strong>noll alkohol</strong>. Det finns ingen beräkning av antal glas eller timmar som säkert visar att en viss person kan köra. Nedbrytningen varierar och påverkas inte på ett tillförlitligt sätt av kaffe, dusch, sömn eller fysisk aktivitet.</p>
+<p>Efter alkoholintag kvällen före kan alkohol finnas kvar nästa morgon eller förmiddag. Även när alkoholhalten har sjunkit kan baksmälla med trötthet, huvudvärk och nedsatt koncentration försämra körningen. Vid osäkerhet ska du inte köra.</p>
+<h2>Andra droger och läkemedel</h2>
+<p>Olagliga droger kan kraftigt försämra uppmärksamhet, omdöme, reaktion och motorik. För narkotika gäller i huvudsak nollgräns i trafiken efter olagligt intag.</p>
+<p>Läkemedel kan också påverka körförmågan. Vissa smärtstillande, lugnande och sömngivande läkemedel är narkotikaklassade. Ett narkotikaklassat läkemedel som har ordinerats av läkare eller annan behörig receptutfärdare omfattas av ett ordinationsundantag när det används enligt ordination. Undantaget innebär inte att du får köra om läkemedlet har gjort dig trafikfarligt påverkad.</p>
+<p>Innan du kör:</p>
+<ul><li>använd endast läkemedel som är avsedda för dig och följ ordinationen</li><li>läs bipacksedeln, särskilt information om bilkörning och användning av maskiner</li><li>fråga läkare eller apotekspersonal om du är osäker</li><li>var särskilt försiktig när behandlingen börjar, dosen ändras eller flera läkemedel kombineras</li><li>kör inte om du känner dig trött, yr, långsam, förvirrad eller på annat sätt påverkad</li></ul>
+<p>Det är förarens ansvar att bedöma om körningen kan ske säkert. Ändra inte doseringen på egen hand för att kunna köra.</p>
+<figure class="photo-fig"><img src="../assets/bipacksedel.png" alt="Läs avsnittet om körförmåga i bipacksedeln. Varningstriangeln på förpackningen säger inte allt."><figcaption>Läs avsnittet om körförmåga i bipacksedeln. Varningstriangeln på förpackningen säger inte allt.</figcaption></figure>
+<h2>Sjukdom</h2>
+<p>Sjukdom är ett särskilt kunskapsområde i Transportstyrelsens föreskrifter för kunskapsprovet. Både tillfälliga och långvariga tillstånd kan påverka förmågan att köra.</p>
+<p>Avstå från körning om sjukdom medför exempelvis:</p>
+<ul><li>feber, uttorkning eller uttalad trötthet</li><li>yrsel, svimningskänsla eller balanssvårigheter</li><li>nedsatt syn, koncentration eller reaktionsförmåga</li><li>stark smärta eller begränsad rörlighet</li><li>risk för plötslig medvetandepåverkan</li></ul>
+<p>Ta hänsyn både till sjukdomen och till läkemedlen som används mot den. Vid osäkerhet ska du fråga behandlande vårdpersonal. Den som har ett tillstånd som kan påverka körförmågan behöver följa medicinska råd och de krav som gäller för innehav av behörighet.</p>
+<h2>Avgaser och kolmonoxid</h2>
+<p>Förbränningsavgaser kan innehålla <strong>kolmonoxid</strong>, en färg- och luktlös gas som hindrar blodet från att transportera syre. Kolmonoxidförgiftning kan ge huvudvärk, yrsel, illamående, trötthet, förvirring, medvetslöshet och dödsfall. Luktsinnet kan inte användas för att bedöma risken.</p>
+<ul><li>Låt aldrig motorn gå på tomgång i garage, släp, verkstad eller annat slutet eller dåligt ventilerat utrymme.</li><li>Undvik tomgång där avgaser kan samlas, till exempel i en djup grop, ett tält, ett vindskydd eller en täckt skoterpulka.</li><li>Vid misstänkt exponering: stäng av motorn om det kan göras säkert, för alla till frisk luft och vila. Kör inte och försök inte backa ut skotern om du känner dig påverkad.</li><li>Hjälp andra till frisk luft utan att själv gå in i en farlig miljö. Ring Giftinformation på <strong>010-456 67 00</strong> vid symtom. Ring <strong>112</strong> vid andningsbesvär, bröstsmärta, förvirring, kramper, svimning, medvetslöshet eller annan allvarlig påverkan.</li></ul>
+<p>Den som har symtom ska inte köra vidare. Följ instruktionerna från SOS Alarm eller sjukvården.</p>
+<h2>Grupptryck och beslut</h2>
+<p>Negativt grupptryck kan uppstå när en förare känner sig tvungen att hålla en hastighet, välja en väg eller genomföra en passage som inte känns säker. Social påverkan kan göra att risker tonas ned och att ansvaret upplevs som delat, men varje förare ansvarar för sin körning.</p>
+<p>Kom överens före turen om:</p>
+<ul><li>ett tempo som alla kan hålla med säkerhetsmarginal</li><li>att gruppen väntar vid vägval och passager</li><li>tydliga signaler för stopp och vändning</li><li>att vem som helst får avbryta utan diskussion</li></ul>
+<p>Säg till tidigt om tempo, terräng eller förhållanden överstiger din förmåga. Sänk hastigheten, stanna eller välj en annan väg när det behövs.</p>
+<div class="callout remember"><strong>Kom ihåg:</strong> Kör inte när alkohol, droger, läkemedel, sjukdom, trötthet eller stress försämrar förmågan. Ingen alkoholberäkning är säker, och påverkan kan finnas kvar nästa dag.</div>
+<p class="sources-note">Källor till kapitlet finns i källförteckningen längst bak i boken. Kontrollerade 18 september 2026.</p></section>
+<section class='chapter kap07'><div class='hero'><div class='hero-kicker'>Kapitel 7 · Vältning, chock, 112</div><h1>Olyckor och första hjälpen</h1></div><p>Vid en olycka behöver du kunna skydda platsen, larma och ge första hjälpen utan att utsätta dig själv eller andra för ytterligare fara. Det här kapitlet skiljer mellan lagens krav och rekommenderat agerande samt beskriver första hjälpen enligt Svenska HLR-rådets riktlinjer 2026.</p>
+<p>Efter kapitlet ska du kunna:</p>
+<ul><li>beskriva skyldigheterna för den som har haft del i en trafikolycka</li><li>skilja dessa skyldigheter från rekommenderat agerande som vittne</li><li>larma 112 med användbar information om plats och skadeläge</li><li>bedöma medvetande och normal andning samt påbörja vuxen-HLR</li><li>förebygga nedkylning och ge grundläggande hjälp vid kyl- och brännskador</li></ul>
+<h2>Vanliga olyckor</h2>
+<p>Den vanligaste snöskoterolyckan är att skotern <strong>välter</strong>. Risken påverkas bland annat av hastighet, underlag, lutning, last, passagerare och förarens körställning.</p>
+<p>Andra återkommande risker är:</p>
+<ul><li>alkohol och andra droger</li><li>svag is och drunkning</li><li>kollision med fasta hinder eller andra fordon</li><li>hög hastighet i förhållande till sikt, terräng och förmåga</li></ul>
+<p>En olycka har ofta flera bidragande orsaker. Förebygg genom att anpassa hastighet och vägval, hålla avstånd och avstå från körning när förmågan är nedsatt.</p>
+<figure class="photo-fig"><img src="../assets/olyckstyper.png" alt="Vanliga olyckstyper. Vältning är den vanligaste."><figcaption>Vanliga olyckstyper. Vältning är den vanligaste.</figcaption></figure>
+<h2>Skyldigheter vid trafikolycka</h2>
+<h3>Om du har haft del i olyckan</h3>
+<p>Enligt 2 kap. 8 § trafikförordningen ska en trafikant som med eller utan egen skuld har haft del i en trafikolycka:</p>
+<ol><li><strong>stanna kvar på platsen</strong></li><li><strong>hjälpa skadade efter förmåga</strong></li><li><strong>medverka till de åtgärder som olyckan skäligen kräver</strong>, till exempel att minska risken för en följdolycka</li><li><strong>på begäran lämna namn, adress och upplysningar om händelsen</strong> till någon annan som haft del i olyckan eller vars egendom skadats</li><li><strong>snarast underrätta den skadelidande eller Polismyndigheten</strong> om egendom har skadats och ingen finns på plats som kan ta emot uppgifterna</li><li><strong>snarast underrätta Polismyndigheten</strong> om någon har skadats och skadan inte är obetydlig.</li></ol>
+<p>Fordon som innebär fara eller hinder ska flyttas till lämplig plats. Om någon har dött eller skadats svårt får fordon och andra betydelsefulla spår däremot bara flyttas eller ändras när det behövs för att undanröja fara för annan trafik.</p>
+<p>Skyldigheterna gäller inom ramen för din förmåga och vad situationen skäligen kräver. Utsätt inte dig själv eller andra för allvarlig risk.</p>
+<h3>Om du är vittne</h3>
+<p>Skyldigheterna i trafikförordningen gäller den som haft del i olyckan. Den som bara ser en olycka har ingen sådan skyldighet enligt den bestämmelsen.</p>
+<p>Gör ändå så här, när det kan ske säkert:</p>
+<ul><li>stanna och skapa överblick</li><li>varna andra trafikanter och förebygga följdolyckor</li><li>ringa 112 vid personskada eller akut fara</li><li>ge första hjälpen efter förmåga och följa larmoperatörens instruktioner</li><li>lämna kontaktuppgifter och sakliga iakttagelser till polis eller räddningstjänst.</li></ul>
+<h2>Första åtgärder på platsen</h2>
+<ol><li><strong>Kontrollera säkerheten.</strong> Stäng av skotrar, säkra nyckel och nödstoppslina och bedöm trafik, brand, avgaser, brant terräng, vatten och is.</li><li><strong>Sök direkt efter livshotande yttre blödning.</strong> Tryck omedelbart med händerna mot såret. Lägg förband i eller på såret och fortsätt trycka; anlägg tryckförband när blödningen är under kontroll. Om en livshotande extremitetsblödning inte stoppas med direkt tryck används tourniquet 5–7 cm ovanför skadan, inte över en led. Följ 112-operatörens instruktioner.</li><li><strong>Kontrollera om personen reagerar.</strong> Tala högt och skaka försiktigt i axlarna.</li><li><strong>Ring 112 direkt om personen är medvetslös.</strong> Aktivera högtalarfunktionen och följ larmoperatörens instruktioner. Be någon annan hämta en hjärtstartare om en sådan finns tillgänglig.</li><li><strong>Öppna luftvägen och kontrollera andningen.</strong> Lägg en hand på pannan, böj huvudet bakåt och lyft hakan med den andra handen. Bedöm om andningen är normal.</li><li><strong>Starta HLR om personen inte andas eller andas onormalt.</strong> Långsam, gles, snarkande eller gäspande andning är onormal och kan vara tecken på hjärtstopp. Är du osäker, behandla andningen som onormal och följ 112-operatören.</li></ol>
+<p>Fördela uppgifterna om ni är flera.</p>
+<p>Flytta inte en skadad i onödan vid misstänkt nack- eller ryggskada. Flytta bara när det behövs för livräddande åtgärder eller för att undkomma en omedelbar fara.</p>
+<h2>Vuxen-HLR</h2>
+<p>När en vuxen är medvetslös och inte andas normalt:</p>
+<ol><li>Placera personen på rygg. Starta HLR där personen ligger om underlaget kan användas; på mjukt underlag behöver du trycka hårdare för att nå rätt kompressionsdjup.</li><li>Placera handloven mitt på bröstkorgen och den andra handen ovanpå.</li><li>Ge <strong>30 bröstkompressioner</strong> med raka armar.</li><li>Tryck <strong>5–6 centimeter</strong> djupt i en takt av <strong>100–120 kompressioner per minut</strong>. Släpp upp bröstkorgen helt mellan kompressionerna och minimera avbrotten.</li><li>Öppna luftvägen med <strong>huvudbakåtböjning och haklyft</strong> och ge <strong>2 inblåsningar</strong>, så att bröstkorgen höjer sig.</li><li>Fortsätt <strong>30 kompressioner och 2 inblåsningar, 30:2</strong>.</li></ol>
+<p>Om du inte kan eller vill ge inblåsningar ska du ge kontinuerliga bröstkompressioner. Anslut en hjärtstartare så snart som möjligt, följ dess talade instruktioner och fortsätt HLR enligt anvisningarna. Fortsätt tills personen visar tydliga livstecken eller professionell hjälp tar över.</p>
+<h3>Vid drunkning</h3>
+<p>När en person har tagits upp ur vattnet är syrebrist en särskilt viktig orsak till hjärtstopp. Larma 112 tidigt. Om personen är medvetslös och inte andas normalt ska du enligt Svenska HLR-rådets riktlinjer ge <strong>5 inledande inblåsningar</strong> och därefter fortsätta med vuxen-HLR <strong>30:2</strong>. Följ larmoperatörens instruktioner. För barn fortsätter den som är utbildad i barn-HLR med <strong>15:2</strong>; den som inte är utbildad följer 112-operatörens instruktioner och kan använda 30:2.</p>
+<p>Använd hjärtstartare så snart den finns. Torka bröstkorgen så att elektroderna fäster och se till att ingen rör personen eller befinner sig i samma vattenpöl under analys eller stöt.</p>
+<p>Gå inte ut i osäkert vatten eller på osäker is så att även du blir nödställd. Använd i första hand räddningslina, livboj eller annat förlängande hjälpmedel från säker plats.</p>
+<h3>Medvetslös person som andas normalt</h3>
+<p>En medvetslös person som andas normalt ska placeras i stabilt sidoläge, om skadeläget medger det. Ring 112, skydda personen mot kyla och kontrollera fortlöpande att andningen förblir normal. Om andningen blir onormal eller upphör ska personen läggas på rygg och HLR startas.</p>
+<p>Stabilt sidoläge ska inte användas vid misstänkt hjärtstopp.</p>
+<h2>Misstänkt cirkulationssvikt</h2>
+<p>Blekhet, kallsvettning, oro, förvirring, snabb ytlig andning eller tilltagande slöhet efter en olycka kan vara tecken på ett allvarligt tillstånd, bland annat cirkulationssvikt.</p>
+<ul><li>Ring 112 och följ instruktionerna.</li><li>Låt personen vila i en ställning som är säker och tolereras väl.</li><li>Stoppa synlig kraftig blödning med direkt tryck.</li><li>Isolera mot marken och håll personen varm med torra kläder, filtar eller räddningsfolie, utan att överhetta.</li><li>Prata lugnt och övervaka medvetande och andning.</li><li>Ge inte mat eller dryck.</li></ul>
+<div class="callout remember"><strong>Kom ihåg:</strong> En vaken person med tecken på chock eller cirkulationssvikt ska hållas varm och får inte ges mat eller dryck. En medvetslös person ska alltid bedömas utifrån om andningen är normal.</div>
+<h2>Kylskada och nedkylning</h2>
+<p>Skydda personen från fortsatt kyla, vind, fukt och markkyla. Ta varsamt av våta kläder och isolera med torra kläder, filtar eller sovsäck. En kraftigt nedkyld person ska hanteras varsamt och ligga stilla på rygg. Ring 112 vid slöhet, förvirring, avtagande huttring, medvetslöshet eller onormal andning.</p>
+<p>Vid lokal kylskada:</p>
+<ul><li>börja varsam uppvärmning omedelbart, helst <strong>hud mot hud</strong>, till exempel en varm hand mot en kind eller fingrar i en armhåla</li><li>gnugga eller massera inte området</li><li>använd inte hett vatten, öppen låga eller upphettade föremål</li><li>tina inte en djup kylskada om kroppsdelen riskerar att frysa igen innan vård kan nås</li><li>skydda området och sök omedelbar vård vid djup skada eller blåsor; kontakta vården vid kvarstående känselbortfall.</li></ul>
+<h2>Brännskada</h2>
+<p>Avlägsna först värmekällan utan att utsätta dig för risk. Kyl brännskadan så snart som möjligt med <strong>svalt rinnande vatten i minst 20 minuter</strong>. Använd inte is, snö eller mycket kallt vatten.</p>
+<p>Kyl själva skadan men håll resten av personen varm. I vintermiljö måste kylningen anpassas eller avbrytas om personen riskerar att bli nedkyld. Täck därefter skadan löst med ett rent, torrt förband.</p>
+<p>Kontakta 1177 eller vården vid brännskada större än den skadades hand, djup skada, blåsor eller sönderbränd hud, skada i ansikte, på händer, fötter, underliv eller över större leder samt vid el- eller frätskada. Ring 112 vid inandning av brandrök, påverkat allmäntillstånd, akut fara eller enligt larmoperatörens bedömning.</p>
+<h2>Larma</h2>
+<p>Ring <strong>112</strong> vid medvetslöshet, onormal andning, allvarlig skada eller akut fara. I fjällterräng ansvarar Polismyndigheten för den statliga fjällräddningen och 112 förmedlar larmet rätt.</p>
+<p>Berätta:</p>
+<ul><li><strong>var ni är</strong> — GPS-position, lednamn, närmaste stuga, väg eller annat landmärke</li><li><strong>vad som har hänt</strong></li><li><strong>hur många som är skadade</strong></li><li>om de skadade är vakna och om de andas normalt</li><li>vilka omedelbara risker som finns på platsen</li><li>ditt namn och telefonnummer.</li></ul>
+<p>Följ larmoperatörens instruktioner, avsluta inte samtalet förrän du får besked och håll telefonen tillgänglig. Organisera mottagandet av räddningsresurser enligt instruktion från 112 eller räddningspersonalen. Använd inte fordonsljus eller andra signaler på ett sätt som skapar bländning, brandrisk, avgaser eller annan fara.</p>
+<div class="callout remember"><strong>Kom ihåg:</strong> Säkerhet — livshotande blödning — reaktion — 112 på högtalare — normal andning — HLR 30:2 vid onormal eller ingen andning — hjärtstartare så snart som möjligt.</div>
+<p class="sources-note">Källor till kapitlet finns i källförteckningen längst bak i boken. Kontrollerade 18 september 2026.</p></section>
+<section class='chapter kap08'><div class='hero'><div class='hero-kicker'>Kapitel 8 · Körgård, ställning, fastkörd</div><h1>Praktisk körning</h1></div><p>Den praktiska utbildningen ska ge dig förmåga att hantera snöskotern säkert och självständigt. Utbildaren planerar övningarna utifrån kursplanen, övningsplatsens riskbedömning, aktuellt underlag, väder, fordon och elevens färdighetsnivå.</p>
+<p>Efter kapitlet ska du kunna:</p>
+<ul><li>genomföra en säkerhetskontroll</li><li>välja och anpassa körställning, även vid backning</li><li>accelerera, bromsa, svänga och väja med kontroll</li><li>anpassa hastighet och vägval till sikt, underlag och terräng</li><li>köra i lutning och passera hinder på ett säkert sätt</li><li>ta loss eller bärga en fastkörd snöskoter med säkra arbetsmetoder.</li></ul>
+<h2>Utbildningens ramar</h2>
+<p>Vid övningskörning som inte sker i gatutrafik eller på landsväg får en lärare undervisa högst fyra elever åt gången.</p>
+<p>Övningsplatsen ska vara lämplig med hänsyn till säkerheten och den föreskrivna utbildningen. De praktiska övningarna ska genomföras i en hastighet som gör det möjligt att uppnå respektive utbildningsmål.</p>
+<p><strong>Hastigheten för varje moment bestäms av instruktören</strong> utifrån undervisningsplanen och platsens riskbedömning. Du ska alltid anpassa hastigheten till sikt, underlag, avstånd och egen förmåga.</p>
+<p>Använd föreskriven personlig skyddsutrustning. Hjälmen ska vara korrekt fastspänd under körning och nödstoppslinan ska vara ansluten enligt tillverkarens anvisningar.</p>
+<h2>Säkerhetskontroll</h2>
+<p>Varje körpass inleds med kontroll av bland annat:</p>
+<ul><li>gasreglage — löper lätt och återgår till tomgångsläge</li><li>broms — fungerar och ger normalt motstånd</li><li>styrning, skidor och drivmatta — fria från synliga skador och hinder</li><li>belysning</li><li>nödstopp och nödstoppslina</li><li>bränsle, olja och andra nivåer enligt fordonets instruktionsbok</li><li>last och eventuella redskap — säkrade</li><li>prov av broms och styrning i låg hastighet efter start.</li></ul>
+<p>Kör inte ett fordon med säkerhetskritiska fel. Rapportera felet till instruktören.</p>
+<h2>Körställningar</h2>
+<p>Körställningen anpassas till fordon, terräng, hastighet och det moment som ska utföras.</p>
+<p><strong>Sittande</strong> ger en låg tyngdpunkt och passar ofta vid lugn körning på jämnt underlag.</p>
+<p><strong>Knästående</strong> ger bättre möjlighet att se, vrida överkroppen och förflytta kroppsvikten.</p>
+<p><strong>Stående</strong> kan ge bättre överblick och möjlighet att använda ben och armar för att ta upp rörelser på ojämnt underlag. Håll knäna lätt böjda och ett stabilt grepp om fordonet.</p>
+<h3>Backning</h3>
+<p>Vid backning <strong>står du på knä på sätet</strong>. Då kan du vrida dig och se bakåt och samtidigt nå styre och reglage. Backa långsamt, kontrollera området bakom dig och avbryt om du tappar sikten eller balansen. Anpassa ställningen efter skoterns konstruktion och instruktörens anvisningar.</p>
+<h3>Uppför, nedför och i skrå</h3>
+<ul><li><strong>Uppför:</strong> flytta kroppsvikten framåt i den omfattning som behövs för styrförmåga och drivgrepp. Välj linje innan stigningen och undvik abrupt gaspådrag.</li><li><strong>Nedför:</strong> håll låg, jämn och kontrollerad hastighet. Anpassa kroppsvikten och använd broms och gas enligt fordonets instruktionsbok, underlaget och instruktörens anvisningar. Undvik att låsa drivbandet.</li><li><strong>Skrå:</strong> förflytta kroppsvikten mot sluttningens högre sida i den omfattning som behövs. Välj en säker linje och planera en väg ut ur situationen.</li></ul>
+<p>Fordonstyper reagerar olika. Instruktörens demonstration och tillverkarens anvisningar gäller för den snöskoter som används.</p>
+<figure class="photo-fig"><img src="../assets/korstallningar.png" alt="Körställningar: sittande, knästående och stående. Vid backning: på knä med blicken bakåt."><figcaption>Körställningar: sittande, knästående och stående. Vid backning: på knä med blicken bakåt.</figcaption></figure>
+<h2>Grundläggande manövrering</h2>
+<p>Grundläggande manöverträning ska genomföras innan övningskörning i trafik.</p>
+<p><strong>Acceleration.</strong> Öka gaspådraget jämnt och behåll balans och riktning.</p>
+<p><strong>Mjuk inbromsning.</strong> Planera stoppet, rikta blicken dit du ska och bromsa progressivt.</p>
+<p><strong>Kraftig inbromsning.</strong> Bromsa bestämt men med bibehållen kontroll. Om drivbandet låser och styrförmågan minskar, anpassa bromskraften enligt instruktörens anvisningar.</p>
+<p><strong>Serpentinkörning.</strong> Rikta blicken genom svängen, håll fötterna på avsedda fotstöd och förflytta kroppsvikten kontrollerat.</p>
+<p><strong>Undanmanöver.</strong> Titta mot den fria vägen, styr kontrollerat och undvik reglageåtgärder som förbrukar tillgängligt grepp.</p>
+<p><strong>Kurvtagning.</strong> Anpassa hastigheten före kurvan och använd lämplig körställning och viktförflyttning för att minska vältrisken.</p>
+<p>Instruktören bestämmer start, stopp, ordningsföljd och högsta tillåtna hastighet för varje övning.</p>
+<h2>Passager och vägval</h2>
+<p>Praktiska moment kan omfatta:</p>
+<ul><li><strong>vägövergång:</strong> stanna före vägen, låt passagerare stiga av och korsa endast när det kan ske säkert och enligt gällande regler</li><li><strong>simulerad järnvägspassage:</strong> öva stopp, observation och säker passage under instruktörens ledning</li><li><strong>plogvall, bro och andra hinder:</strong> välj hastighet och körställning så att passagen kan genomföras med kontroll</li><li><strong>vägval i lutning:</strong> välj en linje som minskar vält-, kollisions- och fastkörningsrisk.</li></ul>
+<p>Bedöm alltid om ett moment ska genomföras. Instruktören ska ändra eller avbryta övningen om plats, väder eller underlag inte ger tillräcklig säkerhet.</p>
+<h2>Fastkörd snöskoter och bärgning</h2>
+<p>Planera arbetet innan någon gräver, lyfter eller drar:</p>
+<ol><li><strong>Stäng av motorn.</strong> Säkra nyckel och nödstoppslina så att motorn inte kan starta oavsiktligt.</li><li><strong>Stabilisera snöskotern.</strong> Kontrollera att den inte kan glida, välta eller klämma någon. Arbeta inte under en instabil maskin.</li><li><strong>Hjälmen får tas av vid grävning</strong> om platsen är säker och ingen risk för fall eller slag finns. Den ska på igen innan någon startar motorn.</li><li><strong>Skapa utrymme.</strong> Gräv eller trampa bort snö framför, bakom och vid sidorna samt under de delar som hindrar rörelsen.</li><li><strong>Arbeta ergonomiskt.</strong> Stå stabilt, håll ryggen så neutral som möjligt, böj knäna, arbeta nära kroppen och samordna lyft. Avbryt om belastningen blir för stor.</li><li><strong>Undvik personer nära drivband och rörliga delar.</strong> Starta inte motorn förrän alla står på säkert avstånd och instruktören har gett klartecken.</li><li><strong>Använd dragutrustning rätt.</strong> Använd endast oskadad, rätt dimensionerad dragutrustning och avsedda fästpunkter. Dra jämnt; ryck eller chockbelasta aldrig lina, stropp eller vinsch. Ingen får stå mellan fordonen eller i linans möjliga rekyl- eller piskzon. Följ utrustningens anvisningar och använd lindämpare när sådan föreskrivs.</li></ol>
+<figure class="photo-fig"><img src="../assets/fastkord-skoter.png" alt="Fastkörd: stäng av motorn och gräv fritt runt mattan och framför skidorna innan du försöker köra loss."><figcaption>Fastkörd: stäng av motorn och gräv fritt runt mattan och framför skidorna innan du försöker köra loss.</figcaption></figure>
+<h2>Vad instruktören bedömer</h2>
+<p>Bedömningen omfattar bland annat:</p>
+<ol><li>säkerhetskontroll och användning av skyddsutrustning</li><li>bromsning, styrning och manövrering med bibehållen kontroll</li><li>hastighetsanpassning efter sikt, underlag, terräng och andra deltagare</li><li>körställning, balans och viktförflyttning</li><li>vägval, riskmedvetenhet och förmåga att följa instruktioner</li><li>säker hantering vid fastkörning eller bärgning.</li></ol>
+<p>Ytterligare praktiska moment får ingå när utbildaren kan genomföra dem säkert och de finns beskrivna i undervisningsplanen.</p>
+<div class="callout remember"><strong>Kom ihåg:</strong> Backa på knä med blicken bakåt. I all praktisk körning gäller instruktörens anvisningar, platsens riskbedömning och en hastighet som ger kontroll.</div>
+<p class="sources-note">Källor till kapitlet finns i källförteckningen längst bak i boken. Kontrollerade 18 september 2026.</p></section>
+<section class='endcard kap09'><div class='stamp'>Examination</div><h1>Inför kunskapsprovet</h1><p>När den teoretiska och praktiska utbildningen är genomförd får du göra kunskapsprovet inför en behörig provförrättare.</p>
+<h2>Förutsättningar</h2>
+<ul><li>Du ska ha fyllt <strong>16 år</strong>.</li><li>Du ska ha genomfört utbildningen hos en godkänd utbildare.</li><li>Ta med den identitetshandling som provanordnaren kräver.</li><li>Följ provanordnarens instruktioner om tillåtna hjälpmedel, placering och genomförande.</li></ul>
+<h2>Så är provet reglerat</h2>
+<p>Kunskapsprovet:</p>
+<ul><li>ska bestå av <strong>lägst 25 och högst 35 frågor</strong></li><li>kräver <strong>minst 80 procent rätt</strong> för godkänt resultat</li><li>ska normalt vara skriftligt</li><li>får genomföras muntligt om eleven har påtagliga läs- eller skrivsvårigheter</li><li>prövar fordonskännedom, trafikregler, trafiksäkerhet och personliga förutsättningar.</li></ul>
+<p>För snöskoter utformas frågorna med ett rätt svarsalternativ.</p>
+<h2>Frågor om genomförande och behov av anpassning</h2>
+<p>Kontakta provanordnaren i god tid <strong>före provet</strong> om du har frågor om förfarandet eller behöver ett muntligt eller på annat sätt anpassat genomförande. Fråga vilka regler, underlag och tidsfrister som gäller i just din situation.</p>
+<p>Under provet får provförrättaren inte förklara en fråga så att svaret avslöjas. Läs därför varje fråga noga och fråga hellre före provet om du är osäker på hur det går till. Om ett tekniskt eller praktiskt problem uppstår följer du provförrättarens instruktioner.</p>
+<h2>Efter provet</h2>
+<p>Om du inte blir godkänd får du göra om provet vid ett senare tillfälle enligt provanordnarens rutiner.</p>
+<p>Efter ett godkänt prov:</p>
+<ul><li>rapporterar provanordnaren resultatet till Transportstyrelsen</li><li>får du köra när resultatet har registrerats, om du har giltig legitimation med dig</li><li>måste du efter två månader ha med dig själva förarbeviset när du kör</li><li>skickar Transportstyrelsen en grundhandling och betalningsavi</li><li>ska du skicka in grundhandlingen med fotografi och namnteckning samt betala tillverkningsavgiften</li><li>förlorar du behörigheten om ansökan och betalningen inte har kommit in inom ett år från dagen för det godkända provet.</li></ul>
+<p>Kontrollera alltid aktuella avgifter och administrativa rutiner hos Transportstyrelsen.</p>
+<p class="sources-note">Källor till kapitlet finns i källförteckningen längst bak i boken. Kontrollerade 18 september 2026.</p></section>
+<section class="sources kallor"><h1>Källförteckning</h1>
+<p class="lead">Lagtext, myndighetsinformation och riktlinjer som kapitlen bygger på. Regler kan ändras; kontrollera alltid aktuell källa.</p>
+<h2>Kapitel 1 — Förare och fordon <span class='toc-deck'>Kontrollerade 18 september 2026</span></h2>
+<ul><li>Bilden *Fem skotertyper*: touringfoto Instruktörsverket AB; övriga Wikimedia Commons — Ski-Doo MXZ 800 (public domain, Dirk Unger); Ski-Doo Summit 600 och Expedition SE (CC BY-SA 4.0, GT1976 respektive Asurnipal); Lynx Enduro 400 (public domain, Dirk Unger).</li><li>Transportstyrelsen, <strong>Terrängmotorfordon</strong>: <a href="https://www.transportstyrelsen.se/sv/vagtrafik/fordon/fordonsregler/regler-for-olika-fordonsslag/terrangmotorfordon/">https://www.transportstyrelsen.se/sv/vagtrafik/fordon/fordonsregler/regler-for-olika-fordonsslag/terrangmotorfordon/</a></li><li>Trafikförordningen (1998:1276), bland annat 4 kap. 9 § om skyddshjälm: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/trafikforordning-19981276_sfs-1998-1276/">https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/trafikforordning-19981276_sfs-1998-1276/</a></li><li>MSB, <strong>Transportera farligt gods som privatperson</strong>: <a href="https://www.msb.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/undantag-och-lattnader/transportera-farligt-gods-som-privatperson/">https://www.msb.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/undantag-och-lattnader/transportera-farligt-gods-som-privatperson/</a></li><li>MSB, <strong>Hantering av brandfarliga vätskor</strong> (vägledning om lämpliga och typgodkända behållare): <a href="https://rib.msb.se/filer/pdf/30551.pdf">https://rib.msb.se/filer/pdf/30551.pdf</a></li><li>Camso Powersports, <strong>How to choose the right snowmobile track for your riding style</strong> (kamhöjd per körstil): <a href="https://powersports.camso.co/en-ca/snowmobile/news/how-to-choose-the-right-snowmobile-track-for-your-riding-style">https://powersports.camso.co/en-ca/snowmobile/news/how-to-choose-the-right-snowmobile-track-for-your-riding-style</a></li><li>Rinab, köpguide drivmattor (svensk indelning i led 25–38 mm, on/off 38–50 mm, lössnö 50 mm+): <a href="https://www.rinab.nu/">https://www.rinab.nu/</a></li><li>För kylning, drivmatta, slirskydd och isrivare gäller i första hand instruktionsboken och tillverkarens anvisningar för den aktuella modellen.</li></ul>
+<h2>Kapitel 2 — Miljö, natur och hänsyn <span class='toc-deck'>Kontrollerade 18 september 2026</span></h2>
+<ul><li>Naturvårdsverket, <strong>Snöskoter</strong>: <a href="https://www.naturvardsverket.se/amnesomraden/friluftsliv/motortrafik-i-naturen/snoskoter/">https://www.naturvardsverket.se/amnesomraden/friluftsliv/motortrafik-i-naturen/snoskoter/</a></li><li>Terrängkörningslagen (1975:1313): <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/terrangkorningslag-19751313_sfs-1975-1313/">https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/terrangkorningslag-19751313_sfs-1975-1313/</a></li><li>Terrängkörningsförordningen (1978:594), bland annat 4 § om plant- och ungskog: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/terrangkorningsforordning-1978594_sfs-1978-594/">https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/terrangkorningsforordning-1978594_sfs-1978-594/</a></li><li>Trafikförordningen (1998:1276), 2 kap. 1 § om hänsyn i terräng: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/trafikforordning-19981276_sfs-1998-1276/">https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/trafikforordning-19981276_sfs-1998-1276/</a></li><li>Funäsfjällen, <strong>Skoterregler i Funäsfjällen</strong>: <a href="https://funasfjallen.se/kunskapsbank/skoterregler-i-funasfjallen/">https://funasfjallen.se/kunskapsbank/skoterregler-i-funasfjallen/</a></li><li>Funäsfjällens Ledbolag, <strong>Skoter</strong> och aktuell ledstatus: <a href="https://funasfjallensledbolag.se/skoter/">https://funasfjallensledbolag.se/skoter/</a></li></ul>
+<h2>Kapitel 3 — Trafikregler <span class='toc-deck'>Kontrollerade 18 september 2026</span></h2>
+<ul><li>Förordningen (2001:651) om vägtrafikdefinitioner, definitionerna av <strong>terräng</strong> och <strong>väg</strong>: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-2001651-om-vagtrafikdefinitioner_sfs-2001-651/">https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-2001651-om-vagtrafikdefinitioner_sfs-2001-651/</a></li><li>Trafikförordningen (1998:1276), bland annat 1 kap. 4 §, 2 kap. 1 och 7 §§, 3 kap. 18, 30 och 58 §§ samt 5 kap. 1–5 §§: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/trafikforordning-19981276_sfs-1998-1276/">https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/trafikforordning-19981276_sfs-1998-1276/</a></li><li>Transportstyrelsen, <strong>Terrängmotorfordon</strong>: <a href="https://www.transportstyrelsen.se/sv/vagtrafik/fordon/fordonsregler/regler-for-olika-fordonsslag/terrangmotorfordon/">https://www.transportstyrelsen.se/sv/vagtrafik/fordon/fordonsregler/regler-for-olika-fordonsslag/terrangmotorfordon/</a></li><li>Transportstyrelsen, <strong>Högerregeln</strong>: <a href="https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/trafikregler/generella-trafikregler/hogerregeln/">https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/trafikregler/generella-trafikregler/hogerregeln/</a></li><li>Vägmärkesförordningen (2007:90), bland annat C13 och D9: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vagmarkesforordning-200790_sfs-2007-90/">https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vagmarkesforordning-200790_sfs-2007-90/</a></li><li>Transportstyrelsen, <strong>F31 Lämplig väg eller förbifart för visst fordonsslag eller trafikantgrupp</strong>: <a href="https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/vagmarken/lokaliseringsmarken-for-vagvisning/lamplig-vag-eller-forbifart-for-visst-fordonsslag-eller-trafikantgrupp/">https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/vagmarken/lokaliseringsmarken-for-vagvisning/lamplig-vag-eller-forbifart-for-visst-fordonsslag-eller-trafikantgrupp/</a></li><li>Jaktförordningen (1987:905), 22 §: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/jaktforordning-1987905_sfs-1987-905/">https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/jaktforordning-1987905_sfs-1987-905/</a></li></ul>
+<h2>Kapitel 4 — Straff, behörighet och försäkring <span class='toc-deck'>Kontrollerade 18 september 2026</span></h2>
+<ul><li>Transportstyrelsen, <a href="https://www.transportstyrelsen.se/sv/vagtrafik/korkort/forarbevis/forarbevis-for-snoskoter/">Förarbevis för snöskoter</a></li><li>Transportstyrelsen, <a href="https://www.transportstyrelsen.se/sv/vagtrafik/korkort/har-korkort/fordon-du-far-kora/overgangsregler-och-havdvunna-rattigheter/">Övergångsregler och hävdvunna rättigheter</a></li><li>Trafikförsäkringsföreningen, <a href="https://www.tff.se/sv/krav/om-trafikforsakring/">Om trafikförsäkring</a> och <a href="https://www.tff.se/sv/krav/vad-galler-kravet/">Vad gäller kravet?</a></li><li>Sveriges riksdag, trafikskadelag (1975:1410), särskilt 2 och 34 §§</li><li>Polismyndigheten, <a href="https://polisen.se/lagar-och-regler/trafik-och-fordon/ratt--och-sjofylleri/">Rattfylleri och sjöfylleri</a></li><li>Transportstyrelsen, <a href="https://www.transportstyrelsen.se/sv/vagtrafik/korkort/har-korkort/villkor-och-medicinska-krav/trafikfarliga-lakemedel/">Trafikfarliga läkemedel</a></li></ul>
+<h2>Kapitel 5 — Trafiksäkerhet <span class='toc-deck'>Kontrollerade 18 september 2026</span></h2>
+<ul><li>Transportstyrelsen, <a href="https://www.transportstyrelsen.se/sv/vagtrafik/korkort/foretag/forarutbildning-och-kunskapsprov/tillstand/kunskapsprov-for-moped-klass-ii-snoskoter-och-terranghjuling/">Kunskapsprov för moped klass II, snöskoter och terränghjuling</a></li><li>Transportstyrelsen, *TSFS 2009:14 om förarbevis för moped klass II, snöskoter och terränghjuling*</li><li>Nationella Snöskoterrådet, *Snöskoterhandboken*</li><li>Reaktions- och bromssträcka: standardformlerna i svensk körkortsutbildning (reaktionssträcka = hastighet/3,6 × reaktionstid; bromssträcka = hastighet² / (250 × friktionstal), där friktionstalet brukar sättas till 0,8 på torr asfalt, 0,3 på snö och 0,1 på is)</li><li>Myndigheten för samhällsskydd och beredskap, RIB, *Utvärdering av insats vid drunkningsolycka, Upplands-Bro 2014* och *Utvärdering av insats vid skoterolycka, Krokoms kommun 2012*</li><li>Naturvårdsverket, <a href="https://www.lavinprognoser.se/">Lavinprognoser.se</a> — aktuella prognoser, lutningsverktyg och allmänna råd</li><li>Fjällsäkerhetsrådet, information om lavinsäkerhet och fjällsäkerhet</li></ul>
+<h2>Kapitel 6 — Människan som förare <span class='toc-deck'>Kontrollerade 18 september 2026</span></h2>
+<ul><li>Transportstyrelsen, <a href="https://www.transportstyrelsen.se/sv/vagtrafik/korkort/foretag/forarutbildning-och-kunskapsprov/tillstand/kunskapsprov-for-moped-klass-ii-snoskoter-och-terranghjuling/">Kunskapsprov för moped klass II, snöskoter och terränghjuling</a></li><li>Transportstyrelsen, *TSFS 2009:14 om förarbevis för moped klass II, snöskoter och terränghjuling*</li><li>Transportstyrelsen, <a href="https://www.transportstyrelsen.se/sv/vagtrafik/korkort/har-korkort/villkor-och-medicinska-krav/trafikfarliga-lakemedel/">Trafikfarliga läkemedel</a></li><li>Polismyndigheten, <a href="https://polisen.se/lagar-och-regler/trafik-och-fordon/ratt--och-sjofylleri/">Rattfylleri och sjöfylleri</a></li><li>Öström, Eriksson m.fl., Umeå universitet, studier av dödsolyckor med snöskoter 1999–2006 och 2006–2012 (andel alkoholpåverkade, promillehalter, helg och mörker)</li><li>Nationella Snöskoterrådet, attitydundersökning om alkohol och skoterkörning (refererad av SVT Nyheter Jämtland)</li><li>SNOFED, *Snöskoterboken*, kapitel 10 &quot;Personliga förutsättningar&quot;</li><li>1177 Vårdguiden, information om akut förgiftning och när 112 ska kontaktas</li><li>Giftinformationscentralen, information om kolmonoxid</li></ul>
+<h2>Kapitel 7 — Olyckor och första hjälpen <span class='toc-deck'>Kontrollerade 18 september 2026</span></h2>
+<ul><li><a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/trafikforordning-19981276_sfs-1998-1276/">Trafikförordning (1998:1276), 2 kap. 8 § — Sveriges riksdag</a></li><li><a href="https://www.hlr.nu/wp-content/uploads/2026/06/Sammanfattning-riktlinjer-2026_ver260526.pdf">Sammanfattning av HLR-rådets riktlinjer för hjärt-lungräddning och första hjälpen 2026 — Svenska HLR-rådet</a></li><li><a href="https://www.hlr.nu/sa-har-gor-du-vuxen-hlr/">Så här gör du Vuxen-HLR — Svenska HLR-rådet</a></li><li><a href="https://www.1177.se/olyckor--skador/brannskador-och-koldskador/koldskador/">Köldskador — 1177</a></li><li><a href="https://www.rodakorset.se/forsta-hjalpen/forsta-hjalpen-instruktioner/brannskador/">Brännskador — Svenska Röda Korset</a></li></ul>
+<h2>Kapitel 8 — Praktisk körning <span class='toc-deck'>Kontrollerade 18 september 2026</span></h2>
+<ul><li><a href="https://www.transportstyrelsen.se/TSFS/TSFS%202009_14k.pdf">Transportstyrelsens föreskrifter (TSFS 2009:14) om förarbevis för moped klass II, snöskoter och terränghjuling, konsoliderad version</a></li><li><a href="https://www.transportstyrelsen.se/sv/vagtrafik/korkort/forarbevis/forarbevis-for-snoskoter/">Förarbevis för snöskoter — Transportstyrelsen</a></li><li><a href="https://www.transportstyrelsen.se/sv/vagtrafik/korkort/foretag/forarutbildning-och-kunskapsprov/tillstand/utbildning-for-moped-klass-ii-snoskoter-och-terranghjuling/">Utbildning för moped klass II, snöskoter och terränghjuling — Transportstyrelsen</a></li><li>SNOFED, *Snöskoterboken*, kapitel 11 &quot;Manövrering och praktisk träning&quot; (körställningar, underlag)</li></ul>
+<h2>Inför kunskapsprovet <span class='toc-deck'>Kontrollerade 18 september 2026</span></h2>
+<ul><li><a href="https://www.transportstyrelsen.se/TSFS/TSFS%202009_14k.pdf">Transportstyrelsens föreskrifter (TSFS 2009:14), särskilt 8 och 10 kap.</a></li><li><a href="https://www.transportstyrelsen.se/sv/vagtrafik/korkort/foretag/forarutbildning-och-kunskapsprov/tillstand/kunskapsprov-for-moped-klass-ii-snoskoter-och-terranghjuling/">Kunskapsprov för moped klass II, snöskoter och terränghjuling — Transportstyrelsen</a></li><li><a href="https://www.transportstyrelsen.se/sv/vagtrafik/korkort/forarbevis/forarbevis-for-snoskoter/">Förarbevis för snöskoter — Transportstyrelsen</a></li></ul>
+</section>
+</div></body></html>

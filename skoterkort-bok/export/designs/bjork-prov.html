@@ -1,0 +1,405 @@
+<!DOCTYPE html><html lang='sv'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Förarbevis snöskoter — Instruktörsverket</title>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link href='https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,650&display=swap' rel='stylesheet'>
+<style>:root {
+  --pine: #5c4030;
+  --moss: #8b6914;
+  --ice: #faf6ef;
+  --paper: #fdfbf7;
+  --cream: #ffffff;
+  --ink: #2a2218;
+  --muted: #6b5c4a;
+  --copper: #c45a28;
+  --gold: #c4922a;
+  --line: #e8dfd0;
+  --html-bg: #ede8df;
+  --cover-bg: #faf6ef;
+  --cover-ink: #3d2e20;
+  --cover-title: #5c4030;
+  --cover-sub: #6b5c4a;
+  --cover-visual-bg: #f0e8dc;
+  --cover-foot-bg: #f5efe6;
+  --shadow-border: #ddd4c8;
+  --shadow-glow: rgba(92,64,48,.10);
+  --hero-from: #f8f0e4;
+  --hero-to: #ede0cc;
+  --hero-ink: #5c4030;
+  --hero-ring: rgba(196,146,42,.22);
+  --h2-border: #e4d8c8;
+  --th-bg: #8b6914;
+  --remember-bg: #f8efe4;
+  --photo-stripe-a: #f6f0e8;
+  --photo-stripe-b: #ece4d8;
+  --photo-border: #b0a090;
+  --page-footer: #6b5c4a;
+  --page-header: #b0a090;
+  --page-chapter: #5c4030;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--html-bg); }
+body {
+  margin: 0;
+  font-family: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  font-size: 17px;
+}
+.page-wrap { max-width: 820px; margin: 0 auto; background: var(--cream); box-shadow: 0 0 0 1px var(--shadow-border), 0 18px 50px var(--shadow-glow); }
+.cover {
+  min-height: 100vh;
+  background: var(--cover-bg);
+  color: var(--cover-ink);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cover-top {
+  padding: 2.2rem 3rem 1.3rem;
+  background: var(--cover-bg);
+}
+.cover-kicker {
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--moss);
+}
+.cover h1 {
+  font-size: 3.2rem;
+  line-height: 1.04;
+  font-weight: 650;
+  margin: 1rem 0 0;
+  max-width: 12ch;
+  color: var(--cover-title);
+}
+.cover .sub { font-size: 1.05rem; color: var(--cover-sub); margin: .7rem 0 0; }
+.cover-rule { width: 4.2rem; height: 3px; background: var(--gold); margin: 1rem 0 0; border: 0; }
+.cover-visual {
+  flex: 1;
+  background: var(--cover-visual-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  min-height: 340px;
+}
+.cover-visual img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+.cover-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.05rem 3rem 1.25rem;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: .85rem;
+  color: var(--cover-sub);
+  letter-spacing: .04em;
+  background: var(--cover-foot-bg);
+}
+.toc, .chapter, .endcard { padding: 2.6rem 3rem 3rem; }
+.toc h2, .endcard h1 { font-family: "Avenir Next", "Segoe UI", sans-serif; color: var(--pine); margin: 0 0 1.4rem; }
+.toc-list { list-style: none; padding: 0; margin: 0; }
+.toc-list li { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--line); font-family: "Avenir Next", "Segoe UI", sans-serif; }
+.toc-num { color: var(--gold); font-weight: 700; min-width: 2.2rem; }
+.toc-title { flex: 1; color: var(--pine); font-weight: 600; }
+.toc-deck { color: var(--muted); font-size: .86rem; font-weight: 400; display: block; margin-top: .15rem; }
+.toc-page { color: var(--muted); font-weight: 600; min-width: 2.2rem; text-align: right; font-variant-numeric: tabular-nums; }
+.hero {
+  background: linear-gradient(135deg, var(--hero-from) 0%, var(--hero-to) 100%);
+  color: var(--hero-ink);
+  padding: 1.8rem 1.7rem 1.5rem;
+  border-radius: 6px;
+  margin: 0 0 1.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  right: -40px; top: -40px;
+  width: 140px; height: 140px;
+  border: 18px solid var(--hero-ring);
+  border-radius: 50%;
+}
+.hero-kicker {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-size: .68rem;
+  color: var(--moss);
+}
+.hero h1 { font-size: 2rem; margin: .45rem 0 0; line-height: 1.15; }
+h2 {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--pine);
+  font-size: 1.22rem;
+  margin: 2rem 0 .7rem;
+  padding-bottom: .35rem;
+  border-bottom: 2px solid var(--h2-border);
+}
+h3 {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--moss);
+  font-size: 1.02rem;
+  margin: 1.4rem 0 .45rem;
+}
+p { margin: 0 0 .85rem; }
+strong { color: var(--pine); }
+a { color: var(--moss); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+ul, ol { margin: 0 0 1rem; padding-left: 1.2rem; }
+li { margin: .28rem 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.2rem;
+  font-size: .92rem;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+th { background: var(--th-bg); color: #fff; text-align: left; padding: .55rem .7rem; font-weight: 600; }
+td { padding: .5rem .7rem; border-bottom: 1px solid var(--line); }
+tr:nth-child(even) td { background: var(--ice); }
+.callout, .photo {
+  border-radius: 4px;
+  padding: .85rem 1rem .85rem 1.05rem;
+  margin: 1rem 0 1.2rem;
+  font-size: .98rem;
+}
+.callout {
+  background: var(--ice);
+  border-left: 5px solid var(--moss);
+  color: var(--pine);
+  font-style: italic;
+}
+.callout.remember { border-left-color: var(--copper); background: var(--remember-bg); }
+.photo {
+  background: repeating-linear-gradient(-45deg, var(--photo-stripe-a), var(--photo-stripe-a) 8px, var(--photo-stripe-b) 8px, var(--photo-stripe-b) 16px);
+  border: 1.5px dashed var(--photo-border);
+  color: var(--muted);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: .88rem;
+  font-style: normal;
+  text-align: center;
+  min-height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo-fig {
+  margin: 1.1rem 0 1.4rem;
+  padding: 1rem 1rem .85rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  text-align: center;
+}
+.photo-fig img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 480px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.photo-fig.sign img { max-height: 240px; width: auto; }
+.photo-fig figcaption {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: .82rem;
+  color: var(--muted);
+  margin: .7rem 0 0;
+}
+.sources-note {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: .8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: .6rem;
+  margin-top: 1.8rem;
+}
+.sources h1 { font-family: "Avenir Next", "Segoe UI", sans-serif; color: var(--pine); margin: 0 0 .4rem; }
+.sources .lead { color: var(--muted); font-size: .95rem; margin-bottom: 1.2rem; }
+.sources h2 { font-size: 1.02rem; margin: 1.3rem 0 .4rem; }
+.sources ul {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: .78rem;
+  line-height: 1.35;
+}
+.sources a { word-break: break-all; }
+.endcard {
+  background: linear-gradient(180deg, var(--cream), var(--ice));
+}
+.endcard .stamp {
+  display: inline-block;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .7rem;
+  color: var(--copper);
+  border: 1px solid var(--copper);
+  padding: .25rem .6rem;
+  margin-bottom: 1rem;
+}
+@media print {
+  html, body { background: white; }
+  body { font-size: 16px; line-height: 1.48; }
+  .page-wrap { box-shadow: none; max-width: none; }
+  .cover, .toc, .chapter, .endcard, .sources { page-break-after: always; padding: 0; }
+  .cover { min-height: 100vh; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cover-visual { min-height: auto; flex: 1; align-items: center; padding: .4rem 0; }
+  .cover-visual img { width: 100%; height: auto; max-height: 11.5cm; object-fit: contain; }
+  h2 { margin-top: 1.55rem; }
+  h3 { margin-top: 1.1rem; }
+  p { margin-bottom: .7rem; }
+  ul, ol { margin-bottom: .8rem; }
+  .photo-fig { margin: .9rem 0 1.1rem; padding: .6rem; }
+  .photo-fig img { width: 100%; max-height: 11cm; object-fit: contain; }
+  .photo-fig.sign img { max-height: 5.5cm; width: auto; }
+  .hero, th, tr:nth-child(even) td, .callout, .photo, .photo-fig { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@page { size: A4; margin: 19mm 14mm 19mm; }
+@page { @bottom-center { content: counter(page); font: 9.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #6b5c4a; } }
+@page { @top-right { content: 'Förarbevis snöskoter · Instruktörsverket AB'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #b0a090; letter-spacing: .04em; } }
+@page cover { margin: 0; @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } }
+@page toc { @top-left { content: 'Innehåll'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.cover { page: cover; }
+.toc { page: toc; }
+@page kap00 { @top-left { content: 'Förord'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kap00 { page: kap00; }
+@page kap01 { @top-left { content: 'Kapitel 1 · Förare och fordon'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kap01 { page: kap01; }
+@page kap02 { @top-left { content: 'Kapitel 2 · Miljö, natur och hänsyn'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kap02 { page: kap02; }
+@page kap03 { @top-left { content: 'Kapitel 3 · Trafikregler'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kap03 { page: kap03; }
+@page kap04 { @top-left { content: 'Kapitel 4 · Straff, behörighet och försäkring'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kap04 { page: kap04; }
+@page kap05 { @top-left { content: 'Kapitel 5 · Trafiksäkerhet'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kap05 { page: kap05; }
+@page kap06 { @top-left { content: 'Kapitel 6 · Människan som förare'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kap06 { page: kap06; }
+@page kap07 { @top-left { content: 'Kapitel 7 · Olyckor och första hjälpen'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kap07 { page: kap07; }
+@page kap08 { @top-left { content: 'Kapitel 8 · Praktisk körning'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kap08 { page: kap08; }
+@page kap09 { @top-left { content: 'Inför kunskapsprovet'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kap09 { page: kap09; }
+@page kallor { @top-left { content: 'Källförteckning'; font: 8.5px 'Avenir Next', 'Segoe UI', sans-serif; color: #5c4030; letter-spacing: .04em; } }
+.kallor { page: kallor; }</style></head><body><div class='page-wrap'>
+<section class="cover">
+          <div class="cover-top">
+            <div class="cover-kicker">Instruktörsverket AB · Tänndalen</div>
+            <h1>Förarbevis snöskoter</h1>
+            <hr class="cover-rule">
+            <p class="sub">Utbildningsmaterial</p>
+          </div>
+          <div class="cover-visual">
+            <img src="../../assets/omslag-skoter.jpg" alt="Snöskoter på is vid Tänndalen">
+          </div>
+          <div class="cover-foot">
+            <span>Teori · praktik</span>
+            <span>Förarbevis snöskoter</span>
+          </div>
+        </section>
+<section class='toc'><h2>Innehåll</h2><ul class='toc-list'><li><span class="toc-num">1</span><span class="toc-title">Förare och fordon<span class="toc-deck">Maskinen, kläderna, kontrollen</span></span></li><li><span class="toc-num">2</span><span class="toc-title">Miljö, natur och hänsyn<span class="toc-deck">Spår, djur och avgaser</span></span></li><li><span class="toc-num">3</span><span class="toc-title">Trafikregler<span class="toc-deck">Skyltar, led och 20 km/h</span></span></li><li><span class="toc-num">4</span><span class="toc-title">Straff, behörighet och försäkring<span class="toc-deck">Vem får köra, vad som täcks</span></span></li><li><span class="toc-num">5</span><span class="toc-title">Trafiksäkerhet<span class="toc-deck">Fart, is, barn och stoppsträcka</span></span></li><li><span class="toc-num">6</span><span class="toc-title">Människan som förare<span class="toc-deck">Trötthet, alkohol, grupptryck</span></span></li><li><span class="toc-num">7</span><span class="toc-title">Olyckor och första hjälpen<span class="toc-deck">Vältning, chock, 112</span></span></li><li><span class="toc-num">8</span><span class="toc-title">Praktisk körning<span class="toc-deck">Körgård, ställning, fastkörd</span></span></li><li><span class="toc-num">Prov</span><span class="toc-title">Inför kunskapsprovet<span class="toc-deck">Legitimation, 16 år, boken undan</span></span></li><li><span class="toc-num"></span><span class="toc-title">Källförteckning<span class="toc-deck">Lagar, föreskrifter och riktlinjer per kapitel</span></span></li></ul></section>
+<section class='chapter kap00'><div class='hero'><div class='hero-kicker'>Välkommen</div><h1>Förord</h1></div><p><strong>Instruktörsverket AB</strong> Tänndalen</p>
+<p>Det här är kursboken för förarbevis snöskoter. Du har den med under teorin och praktiken. När kunskapsprovet börjar lägger du undan den.</p>
+<p>Utbildningen ska ge dig kunskap, färdighet och attityd så att du kör med gott omdöme mot människor, fordon, natur och säkerhet.</p>
+<h2>Dagen</h2>
+<table>
+<tr><th>Pass</th><th>Innehåll</th><th>Kapitel</th></tr>
+<tr><td>Förmiddag</td><td>Fordon, miljö, regler, försäkring</td><td>1–4</td></tr>
+<tr><td>Eftermiddag</td><td>Säkerhet, människan, olyckor</td><td>5–7</td></tr>
+<tr><td>Körgård</td><td>Praktisk körning</td><td>8</td></tr>
+<tr><td>Avslut</td><td>Kunskapsprov inför examinator</td><td>—</td></tr>
+</table>
+<h2>Så använder du boken</h2>
+<p>Läs det kapitel ni tar upp. Skyltar och checklistor är till för att slå upp.</p>
+<h2>Ta med</h2>
+<ul><li>Giltig legitimation</li><li>Varma kläder i lager</li><li>Hjälm</li></ul>
+<h2>Ålder</h2>
+<p>Du ska ha fyllt 16 år för att skriva kunskapsprovet. Den praktiska körningen får du börja med från 15 år och 9 månader, men bara under utbildningen.</p></section>
+<section class='chapter kap01'><div class='hero'><div class='hero-kicker'>Kapitel 1 · Maskinen, kläderna, kontrollen</div><h1>Förare och fordon</h1></div><p>God fordonskännedom gör det lättare att upptäcka fel före start och att hantera skotern säkert under körning. Kapitlet behandlar skotertyper, reglage, drivmatta, skyddsutrustning, last och kontroll före körning.</p>
+<p>Efter kapitlet ska du kunna:</p>
+<ul><li>känna igen vanliga skotertyper och deras användningsområden</li><li>peka ut huvuddelar och reglage</li><li>förklara hur nödstopp och nödstoppslina fungerar</li><li>välja drivmatta och utrustning efter underlag och användning</li><li>klä dig och använda lämplig skyddsutrustning</li><li>lasta säkert och hantera extra bränsle</li><li>genomföra en kontroll före körning</li></ul>
+<h2>Olika typer av snöskoter</h2>
+<p>En snöskoter är juridiskt en terrängskoter — ett terrängmotorfordon med en tjänstevikt på högst 450 kilogram — som är avsedd för färd på snötäckt mark och försedd med band och medar. Konstruktionen varierar beroende på om skotern främst är avsedd för led, lössnö, fjäll eller arbete.</p>
+<p><strong>Touring</strong> är byggd för bekväm ledkörning och har ofta plats för passagerare och packning.</p>
+<p><strong>Sport</strong> är vanligen lätt och kvick, med egenskaper anpassade för aktiv körning på led.</p>
+<p><strong>Mountain</strong> är byggd för djup lössnö. Den har normalt lång matta, höga kammar och smalare spårvidd än en ledskoter.</p>
+<p><strong>Crossover</strong> kombinerar egenskaper för led och lösare snö.</p>
+<p><strong>Arbetsskoter</strong> har ofta bred eller lång matta, låg utväxling och god dragförmåga för exempelvis släde, skogsarbete eller ledpreparering.</p>
+<p>Skotern ska väljas efter underlag, last och uppgift. En utpräglad lössnömatta kan få hög belastning och stort slitage på hård led, medan en kortare matta med låga kammar ger sämre bärighet i djup snö.</p>
+<figure class="photo-fig"><img src="../../assets/skotertyper.png" alt="Fem skotertyper. Lägg märke till mattans längd, kamhöjden och spårvidden."><figcaption>Fem skotertyper. Lägg märke till mattans längd, kamhöjden och spårvidden.</figcaption></figure>
+<h2>Huvuddelar</h2>
+<p>Fram sitter <strong>styrskidorna</strong>. Under skidorna finns <strong>styrstål</strong>, som ger styrgrepp på hård snö och is. <strong>Huven</strong> täcker motorrummet.</p>
+<p>På <strong>styret</strong> sitter normalt gasreglage, bromsreglage, nödstopp, ljusreglage och värmereglage. <strong>Fotstöden</strong> ger stöd när föraren sitter, står eller flyttar kroppsvikten.</p>
+<p>Bakom sätet finns <strong>tunneln</strong>. Under den arbetar bakfjädringen och <strong>drivmattan</strong>. Längst bak finns baklyse och ofta fästen för last eller släde.</p>
+<figure class="photo-fig"><img src="../../assets/skoterns-delar.png" alt="Snöskoterns huvuddelar."><figcaption>Snöskoterns huvuddelar.</figcaption></figure>
+<p>Kylsystemet skiljer sig mellan modeller. Många vätskekylda skotrar har värmeväxlare i tunneln och behöver snö som drivmattan kastar upp för effektiv kylning. Fläktkylda modeller fungerar på ett annat sätt. Låg snömängd, blankis eller hårdpackat underlag kan därför ge överhettning eller ökat slitage på vissa modeller. Följ temperaturindikering och instruktionsbok; stanna och undersök orsaken vid varning.</p>
+<p>Skidornas inställning ska kontrolleras enligt tillverkarens mått. En skida som står tydligt snett, onormalt styrmotstånd eller slag i styret kan tyda på fel som ska åtgärdas före körning.</p>
+<p>Under huven kontrollerar du enligt instruktionsboken bland annat olja, kylvätska och att inga ledningar, skydd eller kåpor är lösa eller skadade.</p>
+<figure class="photo-fig"><img src="../../assets/skoter-motor.png" alt="Under huven. Kontrollera olja, kylvätska och att kåpor och ledningar sitter fast."><figcaption>Under huven. Kontrollera olja, kylvätska och att kåpor och ledningar sitter fast.</figcaption></figure>
+<h2>Reglage</h2>
+<p>På förarplatsen ska du kunna hitta och använda:</p>
+<ul><li><strong>gasreglaget</strong></li><li><strong>bromsreglaget</strong></li><li><strong>nödstoppet</strong></li><li>start- och stoppfunktionerna</li><li>ljusreglagen</li></ul>
+<p>Gasreglaget sitter normalt vid höger handtag. När det släpps ska det återgå snabbt och fullständigt till tomgångsläget. Kör inte om reglaget går trögt eller fastnar.</p>
+<p>Bromsreglaget sitter oftast vid vänster handtag. Bromsen ska ta tydligt och utan onormalt lång reglageväg.</p>
+<p>Före start ska nödstoppslinan vara rätt ansluten, gasreglaget <strong>helt släppt</strong> och området framför och bakom skotern fritt.</p>
+<figure class="photo-fig"><img src="../../assets/skoter-reglage.png" alt="Reglagen på styret: broms, ljus, värme, gas, nödstopp, nödstoppslina och start/stopp."><figcaption>Reglagen på styret: broms, ljus, värme, gas, nödstopp, nödstoppslina och start/stopp.</figcaption></figure>
+<h2>Nödstopp och nödstoppslina</h2>
+<p><strong>Nödstoppslinan</strong> fästs i föraren enligt tillverkarens anvisning. Om föraren faller av dras kontakten loss och motorn stängs av. Drivningen upphör, men skotern kan fortsätta rulla eller glida en sträcka beroende på fart, lutning och underlag. Linan är inte ett säkerhetsbälte.</p>
+<p><strong>Nödstoppet</strong> stänger också av motorn och ska vara lätt att nå.</p>
+<h3>Om gasreglaget fastnar</h3>
+<p>Om gasreglaget fastnar under körning:</p>
+<ol><li>aktivera nödstoppet eller dra loss nödstoppslinan</li><li>bromsa kontrollerat</li><li>styr om möjligt mot en säker plats</li></ol>
+<p>Försök inte hålla emot full motorkraft enbart med bromsen. Om gasreglaget kärvar vid kontrollen före start ska skotern inte användas förrän felet är avhjälpt.</p>
+<p>Den största risken när gasreglaget kärvar är att snöskotern <strong>skenar okontrollerat</strong>.</p>
+<h2>Drivmatta, kamhöjd och bärighet</h2>
+<p>Drivmattans kammar överför motorkraften till underlaget. Greppet beror inte bara på kamhöjden. Mattans längd och bredd avgör kontaktytan och därmed bärigheten, och snötyp, last och skoterns vikt påverkar framkomligheten.</p>
+<p>Kamhöjden anges i millimeter, ofta också i tum eftersom mattorna tillverkas efter amerikanska mått. Mattillverkarna delar in dem ungefär så här:</p>
+<ul><li><strong>Ledmattor, 25–38 mm (1–1,5 tum).</strong> Standard på touring- och arbetsskotrar. En Ski-Doo Grand Touring levereras till exempel med 32 mm kam. Låga kammar ger minst slitage, lägst bränsleförbrukning och minst tendens att &quot;skjuta&quot; i kurvor på hård led. Den lägsta höjden, omkring 25 mm, har samtidigt minst greppyta och är därför det sämsta valet när skotern ska dra tung släde på hårdpackad led: mattan slirar när belastningen ökar.</li><li><strong>Crossover-mattor, 38–50 mm (1,5–2 tum).</strong> För den som växlar mellan led och lössnö. Mer drag i mjuk snö, något högre förbrukning.</li><li><strong>Lössnömattor, 50 mm och uppåt (2–3,2 tum).</strong> Gjorda för djup snö och branta backar. På hård led flexar kammarna och blir varma, vilket ger sämre stabilitet, snabbare slitage och högre bränsleförbrukning.</li></ul>
+<p>Tumregeln från tillverkarna är: kör du mer än hälften av tiden på led ska du välja den lägre kamhöjden. Följ alltid skoter- och mattillverkarens gränser för kamhöjd och hastighet, och kontrollera att en högre kam får plats i tunneln.</p>
+<figure class="photo-fig"><img src="../../assets/kamhojd.png" alt="Jämförelse av kamhöjd på drivmattor: 25, 39 och 75 mm."><figcaption>Jämförelse av kamhöjd på drivmattor: 25, 39 och 75 mm.</figcaption></figure>
+<h3>Slirskydd</h3>
+<p>Slirskydd, exempelvis fabriksmonterade greppinsatser eller dubb, kan förbättra acceleration och bromsning på is och hårdpackad snö. De förändrar samtidigt skoterns styrning och belastningen på drivmattan.</p>
+<p>Montera endast en lösning som är godkänd eller rekommenderad för den aktuella skotern och mattan. Kontrollera frigång mot tunnel, kylare och andra delar samt om tunnelskydd krävs. Fel längd, antal eller placering kan skada mattan eller skotern. Kontrollera även lokala regler och ledägarens villkor. På barmark och andra känsliga ytor kan slirskydd orsaka skada; sådan körning ska undvikas.</p>
+<p>Isrivare är en annan utrustning. De river upp snö och is som kan kyla värmeväxlare och smörja slides på hårt underlag. Användning och begränsningar, bland annat vid backning, framgår av skoterns eller utrustningens instruktioner.</p>
+<h2>Variatorn</h2>
+<p>Skotern överför motorkraften genom ett <strong>variatorsystem</strong> med primärvariator, sekundärvariator och variatorrem. Systemet ändrar utväxlingen steglöst.</p>
+<p>Variatorremmen är en slitdel. Felaktig belastning, slirning eller fel inställning kan skada den. Låt motorn vara avstängd, ta ur nyckeln och följ instruktionsboken vid kontroll eller byte. Variatorskyddet ska vara monterat före start.</p>
+<p>På längre turer är extra variatorrem och spade viktig utrustning. Ta även med karta och kompass. GPS eller telefon är ett komplement eftersom batteri och täckning kan svikta.</p>
+<h2>Hjälm och skyddsutrustning</h2>
+<p>Förare och passagerare på snöskoter utan karosseri ska använda skyddshjälm. Passagerare under sju år får använda annat lämpligt huvudskydd. Föraren ansvarar för att passagerare under femton år använder föreskrivet huvudskydd.</p>
+<p>Hjälmen ska passa, vara rätt knäppt och ge tillräcklig sikt. Visir eller glasögon skyddar mot fartvind, snö och föremål.</p>
+<p>Efter hjälmen är <strong>ryggskyddet</strong> det viktigaste extra skyddet. Vid en vältning eller ett fall bakåt är det ryggen som tar smällen. Rejäla stövlar, handskar och visir eller glasögon hör också till grundutrustningen. Skydden ska passa körningen och får inte hindra rörelser eller reglagehantering.</p>
+<h2>Kläder och kyla</h2>
+<p>Fartvinden ökar kroppens värmeförlust. Klä dig därför i flera lager:</p>
+<ol><li>ett fukttransporterande lager närmast kroppen</li><li>ett isolerande lager av exempelvis ull eller fleece</li><li>ett vind- och vattenavvisande ytterlager</li></ol>
+<p>Undvik plagg som sitter så hårt att blodcirkulationen eller isoleringen försämras. Skydda särskilt händer, fötter och ansikte. Vita, stela eller känsellösa hudpartier kan vara tecken på kylskada. Sök skydd, byt våta kläder och värm försiktigt; gnugga inte det skadade området och använd inte alkohol som uppvärmning.</p>
+<h2>Last och extra bränsle</h2>
+<p>Last påverkar tyngdpunkt, bromssträcka och styrförmåga. Följ skoterns, lastbärarens och slädens angivna last- och kultrycksgränser. Placera lasten lågt, fördela den jämnt och surra den så att den inte kan förskjutas, falla av eller nå drivmattan. Lösa bandändar får inte kunna dras in i mattan.</p>
+<h3>Extra bränsle</h3>
+<p>Ta bara med den minsta mängd extra bränsle som behövs för den planerade turen och en rimlig säkerhetsmarginal. Mer bränsle innebär mer vikt och större brand- och läckagerisk.</p>
+<p>MSB:s regler för privat transport av brandfarlig vätska sätter de yttre gränserna: högst 60 liter per behållare och högst 240 liter totalt på fordonet. Det är lagens tak, inte en rekommendation. I praktiken är det skoterns lastgräns och vad du kan surra fast säkert som avgör hur mycket du kan ta med.</p>
+<p>Använd täta, hela behållare som är avsedda och godkända för bensin. Behållare över fem liter bör vara typgodkända enligt gällande transportregler. Fäst dem upprätt och skyddat från värme, slag och nötning. Tanka med avstängd motor, på säker plats och utan tändkällor. Kontrollera också eventuella villkor från uthyrare, transportör, ledägare eller räddningstjänst.</p>
+<h3>Snöskoter på släp</h3>
+<p>När skotern transporteras på släpvagn ska den säkras i alla riktningar med avsedda fästpunkter och utrustning med tillräcklig kapacitet. Använd inte delar som kan deformeras, exempelvis plastkåpor eller styre. Kontrollera surrningen efter en kort körsträcka.</p>
+<h2>Kontroll före körning</h2>
+<p>Gör kontrollen före varje körning och följ instruktionsboken:</p>
+<ul><li><strong>gasreglage</strong> — går lätt och återgår helt</li><li><strong>broms</strong> — tar tydligt och utan läckage</li><li><strong>drivmatta och fjädring</strong> — inga synliga skador eller fastfrusna delar</li><li><strong>styrning och skidor</strong> — fria och utan uppenbara fel</li><li><strong>belysning och reflexer</strong> — hela och rena</li><li><strong>nödstopp och nödstoppslina</strong> — fungerar</li><li><strong>bränsle, olja och kylvätska</strong> — rätt nivå enligt modell</li><li><strong>last och draganordning</strong> — säkrade och inom tillåtna gränser</li></ul>
+<p>Efter start gör du en provbromsning i låg fart på fri yta.</p>
+<h2>Inför turen</h2>
+<p>Kontrollera väder, ledstatus och isinformation. Meddela färdväg och beräknad återkomst till någon som inte deltar i turen. Anpassa reservdelar, spade, första hjälpen, kommunikation och navigationsutrustning efter sträcka och område.</p>
+<p class="sources-note">Källor till kapitlet finns i källförteckningen längst bak i boken. Kontrollerade 18 september 2026.</p></section>
+</div></body></html>

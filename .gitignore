@@ -1,0 +1,15 @@
+.DS_Store
+**/.DS_Store
+
+# Local Python environment
+.venv/
+**/.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jämför färgscheman — Förarbevis snöskoter</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: "Avenir Next", "Segoe UI", sans-serif;
+    background: #e8ece9;
+    color: #243028;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    background: #fff;
+    border-bottom: 1px solid #d8ddd6;
+    padding: 1rem 1.4rem .85rem;
+    flex-shrink: 0;
+  }
+  header h1 { margin: 0; font-size: 1.35rem; }
+  header p { margin: .35rem 0 0; color: #5f7068; font-size: .92rem; max-width: 60ch; }
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    padding: .85rem 1.4rem;
+    background: #f4f6f4;
+    border-bottom: 1px solid #d8ddd6;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  .tabs { display: flex; flex-wrap: wrap; gap: .55rem; flex: 1; }
+  .tab {
+    appearance: none;
+    border: 2px solid #d8ddd6;
+    background: #fff;
+    border-radius: 10px;
+    padding: .65rem .85rem;
+    cursor: pointer;
+    text-align: left;
+    min-width: 150px;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .tab:hover { border-color: var(--tab-moss); }
+  .tab.active {
+    border-color: var(--tab-pine);
+    box-shadow: 0 0 0 1px var(--tab-pine), 0 4px 14px rgba(0,0,0,.08);
+  }
+  .tab strong { display: block; font-size: .95rem; color: var(--tab-pine); }
+  .tab-desc { display: block; font-size: .72rem; color: #5f7068; margin-top: .15rem; line-height: 1.3; }
+  .tab-swatches { display: flex; gap: .25rem; margin-top: .45rem; }
+  .tab-swatches i { width: 1.1rem; height: 1.1rem; border-radius: 3px; display: block; }
+  .mode-btn {
+    appearance: none;
+    border: 1px solid #c8d0ca;
+    background: #fff;
+    border-radius: 8px;
+    padding: .55rem .9rem;
+    font-size: .85rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #243028;
+    white-space: nowrap;
+  }
+  .mode-btn.active { background: #1f6b4a; color: #fff; border-color: #1f6b4a; }
+  .viewer {
+    flex: 1;
+    min-height: 0;
+    padding: 1rem 1.4rem 1.4rem;
+    display: flex;
+  }
+  .viewer iframe {
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 220px);
+    border: 0;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(0,0,0,.12);
+  }
+  .grid-view {
+    display: none;
+    flex: 1;
+    min-height: 0;
+    padding: 1rem 1.4rem 1.4rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    overflow: auto;
+  }
+  .grid-view.visible { display: grid; }
+  .single-view.hidden { display: none; }
+  .grid-panel {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+  }
+  .grid-label {
+    padding: .55rem .85rem;
+    font-size: .88rem;
+    border-bottom: 1px solid #e8ece9;
+    background: #fafbfa;
+  }
+  .grid-panel iframe {
+    flex: 1;
+    width: 100%;
+    min-height: 420px;
+    border: 0;
+  }
+  @media (max-width: 900px) {
+    .grid-view.visible { grid-template-columns: 1fr; }
+  }
+</style></head><body>
+<header>
+  <h1>Jämför färgscheman — Förarbevis snöskoter</h1>
+  <p>Klicka på ett tema nedan för att se omslag, innehållsförteckning, förord och kapitel 1. Scrolla i förhandsvisningen för att se hela provet.</p>
+</header>
+<div class="toolbar">
+  <div class="tabs" id="tabs">
+<button type="button" class="tab active" data-theme="granskog" data-src="granskog-prov.html" style="--tab-pine:#1f6b4a;--tab-moss:#3d8f62;--tab-gold:#d4a017"><strong>Granskog</strong><span class="tab-desc">Naturlig grön ton</span><span class="tab-swatches"><i style="background:#1f6b4a"></i><i style="background:#3d8f62"></i><i style="background:#d4a017"></i></span></button>
+<button type="button" class="tab" data-theme="arktisk" data-src="arktisk-prov.html" style="--tab-pine:#1a4a6b;--tab-moss:#2d7aab;--tab-gold:#3a9ec4"><strong>Arktisk</strong><span class="tab-desc">Djupblått och isblått</span><span class="tab-swatches"><i style="background:#1a4a6b"></i><i style="background:#2d7aab"></i><i style="background:#3a9ec4"></i></span></button>
+<button type="button" class="tab" data-theme="granit" data-src="granit-prov.html" style="--tab-pine:#2c3e50;--tab-moss:#4a6278;--tab-gold:#b8922a"><strong>Granit</strong><span class="tab-desc">Mörkgrå och skiffer med kopparaccent</span><span class="tab-swatches"><i style="background:#2c3e50"></i><i style="background:#4a6278"></i><i style="background:#b8922a"></i></span></button>
+<button type="button" class="tab" data-theme="bjork" data-src="bjork-prov.html" style="--tab-pine:#5c4030;--tab-moss:#8b6914;--tab-gold:#c4922a"><strong>Björk</strong><span class="tab-desc">Varm björk och bärnsten</span><span class="tab-swatches"><i style="background:#5c4030"></i><i style="background:#8b6914"></i><i style="background:#c4922a"></i></span></button>
+  </div>
+  <button type="button" class="mode-btn" id="grid-btn">Visa alla 4</button>
+</div>
+<div class="viewer single-view" id="single-view">
+  <iframe id="preview" src="granskog-prov.html" title="Förhandsvisning"></iframe>
+</div>
+<div class="grid-view" id="grid-view">
+<div class="grid-panel"><div class="grid-label"><strong>Granskog</strong></div><iframe src="granskog-prov.html" title="Granskog"></iframe></div>
+<div class="grid-panel"><div class="grid-label"><strong>Arktisk</strong></div><iframe src="arktisk-prov.html" title="Arktisk"></iframe></div>
+<div class="grid-panel"><div class="grid-label"><strong>Granit</strong></div><iframe src="granit-prov.html" title="Granit"></iframe></div>
+<div class="grid-panel"><div class="grid-label"><strong>Björk</strong></div><iframe src="bjork-prov.html" title="Björk"></iframe></div>
+</div>
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const preview = document.getElementById('preview');
+  const singleView = document.getElementById('single-view');
+  const gridView = document.getElementById('grid-view');
+  const gridBtn = document.getElementById('grid-btn');
+  let gridMode = false;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      gridMode = false;
+      gridBtn.classList.remove('active');
+      gridView.classList.remove('visible');
+      singleView.classList.remove('hidden');
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      preview.src = tab.dataset.src;
+    });
+  });
+
+  gridBtn.addEventListener('click', () => {
+    gridMode = !gridMode;
+    gridBtn.classList.toggle('active', gridMode);
+    gridBtn.textContent = gridMode ? 'Visa en i taget' : 'Visa alla 4';
+    gridView.classList.toggle('visible', gridMode);
+    singleView.classList.toggle('hidden', gridMode);
+  });
+</script>
+</body></html>

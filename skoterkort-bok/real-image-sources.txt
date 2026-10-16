@@ -1,0 +1,396 @@
+Real free-to-use photos — Förarbevis snöskoter
+==============================================
+
+WHAT THE BOOK ACTUALLY USES (copyright-safe for a lecture book)
+--------------------------------------------------------------
+Third-party photos, even with CC BY / CC BY-SA, are still copyrighted.
+This book therefore uses only:
+
+  1. Customer-owned photos (Tänndalens skoteruthyrning, assets/Maskiner)
+  2. Official Swedish road-sign artwork (public domain)
+  3. Original diagrams drawn for this book
+  4. Images generated for this book (not copied from a photographer)
+
+That is why Commons / Unsplash / Pexels files listed below were NOT
+dropped into assets/ for print.
+
+Searched Wikimedia Commons, Unsplash, Pexels, Pixabay, Flickr CC,
+Nordic / Swedish open archives, and US/UK government collections.
+
+License notes (research only, not used in the printed book):
+- CC BY / CC BY-SA: still copyrighted. Legal to reuse only with credit,
+  and CC BY-SA requires share-alike on that photo if you adapt it.
+- Public domain / CC0: no copyright left.
+- Unsplash / Pexels / Pixabay: still copyrighted, with a stock licence.
+- Best extra source you already have: the customer's own fleet
+  (assets/Maskiner). Photograph those for engine, controls, types,
+  riding poses and a stuck sled. Those shots beat stock.
+
+NOT photos (keep as now)
+------------------------
+Official signs (already Wikimedia / public domain):
+  https://commons.wikimedia.org/wiki/Category:Diagrams_of_road_signs_of_Sweden
+  D9  https://commons.wikimedia.org/wiki/File:Sweden_road_sign_D9.svg
+  C13 https://commons.wikimedia.org/wiki/File:Sweden_road_sign_C13.svg
+  C15 https://commons.wikimedia.org/wiki/File:Sweden_road_sign_C15.svg
+  A1  https://commons.wikimedia.org/wiki/File:Sweden_road_sign_A1-1.svg
+  B1  https://commons.wikimedia.org/wiki/File:Sweden_road_sign_B1.svg
+
+Python diagrams (do not replace with photos):
+  kamhojd.png
+  bromsstracka-dubbel-fart.png
+  olyckstyper.png
+  marke-lamplig-skoterled.png
+  marke-olamplig-led.png
+  marke-is-egen-risk.png
+
+Cover (already real customer photo):
+  omslag-skoter.jpg
+
+
+CHAPTER 1
+=========
+
+FILE: assets/skotertyper.png
+STATUS: no single free lineup of all 5 types exists
+USE INSTEAD: five separate real photos, one per type, then crop into a row
+
+Touring (two-up / windshield):
+  https://commons.wikimedia.org/wiki/File:2017-01-15_Ski-Doo_600.jpg
+  License: CC BY-SA 4.0 — GT1976
+  Modern Ski-Doo 600, full machine visible.
+
+  https://commons.wikimedia.org/wiki/File:Innsbruck-Bombadier_Ski-Doo_900ACE-snow_mobile-01ASD.jpg
+  License: CC BY-SA 4.0 — Asurnipal
+  Clean indoor three-quarter of a Ski-Doo 900 ACE.
+
+Sport (low windshield, short track):
+  https://commons.wikimedia.org/wiki/File:Snowmobile_Ski-Doo_MXZ_800.jpg
+  License: Public domain — Dirk Unger
+  Ski-Doo MXZ 800 sport sled.
+
+Mountain (long tall-lug track, narrow stance):
+  https://commons.wikimedia.org/wiki/File:Polaris_800_PRO-RMK_163_at_Legendy_2018_in_Prague.jpg
+  License: CC BY-SA 4.0 — Jiří Sedláček
+  Polaris PRO-RMK 163. Long mountain track is obvious.
+
+Utility / work (wide track, cargo, hitch):
+  https://commons.wikimedia.org/wiki/File:Polaris_S4_Nordic_Pro,_Lompensenteret,_Longyearbyen.jpg
+  License: CC BY-SA 4.0 — Ssu
+  Wide Nordic / work sled, 2024.
+
+  https://commons.wikimedia.org/wiki/File:Lynx_GLX_5900.JPG
+  License: Public domain — MKFI
+  Lynx work / army sled, full side view, 11 MB.
+
+Crossover:
+  No clean free crossover that is obviously "between sport and mountain".
+  Closest: the Ski-Doo 600 touring photo above, or photograph a customer
+  crossover from assets/Maskiner.
+
+AI later if you insist on one studio lineup of all five.
+
+
+FILE: assets/skoterns-delar.png
+STATUS: FOUND — use a clean side view, add Swedish labels in the book
+
+BEST:
+  https://commons.wikimedia.org/wiki/File:Lynx_GLX_5900.JPG
+  License: Public domain — MKFI
+  Full side view: skis, hood, bars, seat, tunnel, track, tail.
+
+ALSO GOOD:
+  https://commons.wikimedia.org/wiki/File:Innsbruck-Bombadier_Ski-Doo_900ACE-snow_mobile-01ASD.jpg
+  License: CC BY-SA 4.0 — Asurnipal
+
+  https://commons.wikimedia.org/wiki/File:Polaris_800_PRO-RMK_163_at_Legendy_2018_in_Prague.jpg
+  License: CC BY-SA 4.0 — Jiří Sedláček
+
+Old labelled diagram (already has French text, do not use as-is):
+  https://commons.wikimedia.org/wiki/File:Motoneige_explication.JPG
+  License: Public domain — Pierre cb
+
+
+FILE: assets/skoter-motor.png
+STATUS: NOT FOUND — generate with AI, or photograph a customer sled
+  with the hood / left side panel off so the CVT belt is visible.
+
+Searched Commons, Flickr CC, Pixabay, Pexels. Plenty of closed hoods.
+No usable open snowmobile engine bay with a real CVT / variator belt.
+Scooter variators exist (wrong machine):
+  https://commons.wikimedia.org/wiki/File:Skutr_variator.jpg
+
+
+FILE: assets/skoter-reglage.png
+STATUS: FOUND — real thumb throttle + red kill switch
+
+BEST:
+  https://commons.wikimedia.org/wiki/File:Motorschlitten_Daumengashebel.jpg
+  License: CC BY-SA 3.0 — René Kieselmann
+  Lynx Pro Yeti. Caption: "Daumengashebel" (thumb throttle) and
+  "roter Not-Aus-Knopf" (red emergency stop). This is the control
+  the current AI image got wrong.
+
+Missing from that photo: the left brake lever and the coiled tether
+cord in the same frame. If you need all three in one picture,
+photograph a customer handlebar or generate that combo with AI.
+
+Whole-bar context (older, not a close-up):
+  https://commons.wikimedia.org/wiki/File:Lynx_GLX_5900.JPG
+
+
+CHAPTER 2
+=========
+
+FILE: assets/avgaser-service.png
+STATUS: NOT FOUND — generate with AI
+  No free pair of "serviced sled / no smoke" vs "worn sled / thick
+  grey exhaust plume". Dirty or muddy sleds exist. That is the wrong
+  lesson.
+
+
+FILE: assets/renar-omvag.png
+STATUS: PARTIAL — real reindeer yes, "turning away from the herd" no
+
+Reindeer in Swedish Lapland (no snowmobile):
+  https://commons.wikimedia.org/wiki/File:Ren,_Lappland_Sverige.jpg
+  License: CC BY 2.5 DK — Johannes Jansson / norden.org
+  Credit: Johannes Jansson/norden.org
+
+Sami herder with reindeer in Sweden (herder is WITH the animals,
+so this is the opposite of the "take a detour" lesson):
+  https://commons.wikimedia.org/wiki/File:Reindeer_herding.jpg
+  License: CC BY 2.0 — Mats Andersson
+  https://www.flickr.com/photos/51496968@N00/55276710
+
+Snowmobile + pulk in reindeer country (herder working the herd,
+again not "avoid"):
+  https://commons.wikimedia.org/wiki/File:Reindeerhurding.jpg
+  License: attribution — "Courtesy altapulken.no"
+  Low resolution (600 px). Only use if you accept the credit line.
+
+Swedish mountain snowmobiles (no reindeer):
+  https://commons.wikimedia.org/wiki/File:Skoter_i_de_svenska_fjallen,_Johannes_Jansson.jpg
+  License: CC BY 2.5 DK — Johannes Jansson / norden.org
+
+AI later for the exact exam picture: rider completing a U-turn AWAY
+from a mixed-size reindeer herd, curved track in the snow.
+
+
+CHAPTER 3
+=========
+
+FILE: assets/ledkryss-roda.png
+STATUS: FOUND — many real Swedish winter-trail crosses
+
+BEST close red X on a post:
+  https://commons.wikimedia.org/wiki/File:Red_crosses_mark_the_winter_route_in_Sylan_in_Sweden.jpg
+  License: CC BY 4.0 — Havardtl (Håvard Lindholm)
+  Winter, Sylan, Sweden. 4.2 megapixel.
+
+  https://commons.wikimedia.org/wiki/File:Red_crosses_mark_the_winter_route_in_Sylan_in_Sweden_2.jpg
+  License: CC BY 4.0 — Havardtl
+  Second frame from the same series.
+
+  https://commons.wikimedia.org/wiki/File:On_the_way_up_to_Bl%C3%A5hammaren_Fj%C3%A4llstation_in_Sweden.jpg
+  License: CC BY 4.0 — Havardtl
+  Ledkryss on the winter route to Blåhammaren, 5.7k photo.
+
+  https://commons.wikimedia.org/wiki/File:Ljungdalen_Mars_2013_01.jpg
+  License: CC BY-SA 3.0 — Arild Vågen
+  Härjedalen winter, Helags / Sylarna behind. 6000 px.
+
+  https://commons.wikimedia.org/wiki/File:Marking_of_winter_trail_from_Helgs_mountain_lodge.JPG
+  License: CC BY-SA 3.0 — NH2501
+  Helags winter-trail marking.
+
+Whole Commons set (19 files):
+  https://commons.wikimedia.org/wiki/Category:Ledkryss
+
+
+FILE: assets/ledkryss-tva-marken.png
+STATUS: FOUND — real Swedish snowmobile-trail marking in Härjedalen
+
+BEST:
+  https://commons.wikimedia.org/wiki/File:Skoterledsmarkering_S%C3%A4rvfj%C3%A4llet.jpg
+  License: CC BY-SA 3.0 — Jonny Hansson
+  "Skoterledsmarkering i Särvfjället i Härjedalens kommun."
+  This is the real ledkryss + snowmobile-trail sign, not a railway
+  crossing. Credit the photographer in the caption.
+
+Official D9 artwork if you need to composite a cleaner disc:
+  https://commons.wikimedia.org/wiki/File:Sweden_road_sign_D9.svg
+  License: public domain (Swedish road-sign artwork)
+
+More Swedish trail photos:
+  https://commons.wikimedia.org/wiki/Category:Snowmobile_trails_in_Sweden
+
+
+CHAPTER 5
+=========
+
+FILE: assets/skra-nedfor-fallkniv.png
+STATUS: NOT FOUND as the three required lessons — generate with AI
+
+What exists (useful atmosphere, wrong pedagogy):
+
+Sitting rider on a trail / mountain:
+  https://commons.wikimedia.org/wiki/File:Airmen_ride_snowmobiles_at_Monarch_mountain_(5938574).jpg
+  License: public domain — US Air Force
+  https://commons.wikimedia.org/wiki/File:Royal_Marines_Driving_Ski-Doos_on_Exercise_in_Norway_MOD_45156547.jpg
+  License: UK Open Government Licence v2
+  https://unsplash.com/photos/person-riding-on-snowmobile-EgJGXPXaVws
+  License: Unsplash — Linnea Friberg, Sweden
+  https://www.pexels.com/photo/man-on-snowmobile-15265019/
+  License: Pexels (free commercial)
+  https://www.pexels.com/photo/snowmobile-on-winter-landscape-10982244/
+  License: Pexels
+  https://pixabay.com/photos/skidoo-snow-moped-vehicle-1916518/
+  License: Pixabay Content License
+
+Pulk / sled (not jackknifed beside a snowmobile):
+  https://commons.wikimedia.org/wiki/File:R%C3%B8d_pulk.JPG
+  License: CC BY-SA 3.0 — Øyvind Holmstad
+  https://commons.wikimedia.org/wiki/File:1967_Sno_Cruiser_pull-behind_snowmobile_sled_--_Vintage_Snowmobiles_at_Tip-Up_Town,_Houghton_Lake,_MI_1-21-2012_(6743822935).jpg
+  License: CC BY-SA 2.0 — Joe Ross
+  Vintage caboose, not a modern plastic pulk fold.
+
+AI later for:
+  1) sidehill with rider weight INTO the mountain
+  2) icy downhill, track still turning, light throttle
+  3) pulk jackknifed ~90 degrees beside the sled
+
+
+FILE: assets/isdubbar.png
+STATUS: FOUND — this is the correct Swedish object and the correct way to wear it
+
+BEST:
+  https://commons.wikimedia.org/wiki/File:Isdubbar,_Eisdorn.jpg
+  License: CC BY-SA 3.0 — Holger Ellgaard
+  Caption: "Så bär man isdubbar." Handles on the chest, spikes down,
+  cord around the neck. This is exactly what the AI image got wrong
+  (it drew daggers).
+
+Museum object, same tool (not worn):
+  https://samlingar.riksidrottsmuseum.se/objects/c25-5364/
+  License: CC BY 4.0 — Riksidrottsmuseum, Lundhags isdubbar
+
+
+CHAPTER 6
+=========
+
+FILE: assets/bipacksedel.png
+STATUS: WEAK MATCH only — better to photograph a real carton + leaflet,
+  or generate with AI so the heading "Körförmåga" is readable and
+  there is no real brand.
+
+Closest real photos (none teach "read the leaflet, not only the triangle"):
+
+Finnish naproxen carton (real brand — avoid if you do not want a
+named medicine in the book):
+  https://commons.wikimedia.org/wiki/File:Pronaxen.jpg
+  License: CC BY-SA 4.0 — Styroks
+
+US FDA historical package insert (English, public domain):
+  https://commons.wikimedia.org/wiki/File:Drug_Package_Insert_(FDA_115)_(8206409270).jpg
+  License: US government public domain
+
+Modern vaccine box + leaflet (real brand, not Swedish "Körförmåga"):
+  https://commons.wikimedia.org/wiki/File:Fluenz_Tetra_influenza_vaccine_(live_attenuated,_nasal)_2023.jpg
+  License: CC BY-SA 4.0 — Whispyhistory
+
+Historical Spanish leaflet (unusable as a modern example):
+  https://commons.wikimedia.org/wiki/File:Medicamento_contra_las_Cuartanas.JPG
+
+
+CHAPTER 8
+=========
+
+FILE: assets/korstallningar.png
+STATUS: sitting and standing FOUND; kneeling and reversing MUST be AI
+  (or photographed on a customer sled)
+
+Panel 1 — sitting:
+  https://commons.wikimedia.org/wiki/File:Airmen_ride_snowmobiles_at_Monarch_mountain_(5938574).jpg
+  License: public domain — US Air Force
+  https://commons.wikimedia.org/wiki/File:Royal_Marines_Driving_Ski-Doos_on_Exercise_in_Norway_MOD_45156547.jpg
+  License: UK OGL
+  https://unsplash.com/photos/person-riding-on-snowmobile-EgJGXPXaVws
+  License: Unsplash — Linnea Friberg, Sweden
+  https://www.pexels.com/photo/man-on-snowmobile-15265019/
+  License: Pexels
+
+Panel 3 — standing:
+  https://commons.wikimedia.org/wiki/File:Motoneige_%C3%A0_conduite_debout.jpg
+  License: CC BY-SA 4.0 — Falia2
+  Caption: "Motoneige à conduite debout" (standing snowmobile riding).
+  Real standing rider, full machine.
+
+Panel 2 — kneeling on the seat, looking forward:
+  NOT FOUND. Generate with AI or photograph.
+
+Panel 4 — kneeling AND looking back while reversing:
+  NOT FOUND. This exam pose does not exist as free stock.
+  Generate with AI or photograph.
+
+
+FILE: assets/fastkord-skoter.png
+STATUS: NOT FOUND — generate with AI, or photograph a customer sled
+  hung up in deep snow, helmet off, digging around the track.
+
+Closest free "snowmobile + shovel" aggregators (check the original
+license on the source page before use; these sites republish):
+  https://www.hippopx.com/en/snowmobile-risk-scooter-excavate-spitsbergen-snow-winter-291166
+  Claims CC0. Verify before print.
+  https://free-images.com/display/snowmobile_workers_with_shovels.html
+  Claims Flickr public domain. Verify on Flickr.
+
+None of those are "buried track + helmet on the snow + digging
+around the machine". Do not use a rider blasting snow at full throttle.
+
+
+UNUSED (chapter 7 first aid, if you put it back)
+================================================
+
+FILE: assets/luftvag-chock.png
+
+Panel 1 — head-tilt / chin-lift: FOUND (indoor, not winter)
+  https://commons.wikimedia.org/wiki/File:Z%C3%A1klon_hlavy_-_zpr%C5%AFchodn%C4%9Bn%C3%AD_d%C3%BDchac%C3%ADch_cest_02.jpg
+  License: CC BY-SA 4.0 — PrPom
+  Real photo: one hand on forehead, one on chin, head tilted back.
+
+  Line drawing if you prefer a diagram:
+  https://commons.wikimedia.org/wiki/File:Head-tilt-chin-lift-maneuver.jpg
+
+Panel 2 — conscious person in a blanket, no food/drink, winter:
+  NOT FOUND. Generate with AI.
+
+
+WHAT TO GENERATE WITH AI (nothing usable found)
+===============================================
+  skoter-motor.png              open hood + real CVT belt
+  avgaser-service.png           serviced vs smoking worn sled
+  renar-omvag.png               U-turn AWAY from a real mixed herd
+  skra-nedfor-fallkniv.png      all 3 panels (sidehill / icy downhill / jackknife)
+  korstallningar.png            kneeling, and reversing looking back
+  fastkord-skoter.png           buried track, helmet off, digging around it
+  bipacksedel.png               generic "Exempelmedicin" + open "Körförmåga" leaflet
+  luftvag-chock.png panel 2     blanket, talking, no food (if used)
+
+Optional AI if you want one perfect studio lineup:
+  skotertyper.png               or build it from the 5 real photos above
+
+
+BROWSE MORE YOURSELF
+====================
+  https://commons.wikimedia.org/wiki/Category:Snowmobiles
+  https://commons.wikimedia.org/wiki/Category:Snowmobiles_in_Sweden
+  https://commons.wikimedia.org/wiki/Category:Lynx_snowmobiles
+  https://commons.wikimedia.org/wiki/Category:Ski-Doo
+  https://commons.wikimedia.org/wiki/Category:Polaris_snowmobiles
+  https://commons.wikimedia.org/wiki/Category:Ledkryss
+  https://commons.wikimedia.org/wiki/Category:Pulka
+  https://unsplash.com/s/photos/snowmobile
+  https://www.pexels.com/search/snowmobile/
+  https://pixabay.com/images/search/snowmobile/
+)

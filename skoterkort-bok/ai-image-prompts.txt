@@ -1,0 +1,324 @@
+AI image prompts — Förarbevis snöskoter
+=======================================
+
+Use these to regenerate the AI photos in another program.
+Do not generate text, captions, banners, arrows or labels in the image.
+The book adds Swedish labels afterwards.
+
+Style for all photos unless a prompt says otherwise:
+- photorealistic, sharp, natural winter light
+- Swedish mountain winter (Härjedalen / Funäsfjällen look)
+- modern Ski-Doo-style touring snowmobile is fine (yellow or dark green)
+- no logos you do not own, no readable fake brand names
+- 16:9 landscape unless noted
+- helmet on whenever someone is riding
+
+NOT AI — do not recreate these as photos
+----------------------------------------
+Official Transportstyrelsen signs (keep Wikimedia / public-domain artwork):
+  marke-forbud-skoter.png          C13
+  marke-pabjuden-skoterled.png     D9
+  marke-forbud-gang-skidor.png     C15
+  vagmarken-former.png             A1, B1, C13, D9 + square info sign
+
+Python diagrams (redraw as diagrams, not photos):
+  kamhojd.png
+  bromsstracka-dubbel-fart.png
+  olyckstyper.png
+  marke-lamplig-skoterled.png
+  marke-olamplig-led.png
+  marke-is-egen-risk.png
+
+Customer photo (already real):
+  omslag-skoter.jpg                Tänndalens skoteruthyrning fleet
+
+
+CHAPTER 1 — Förare och fordon
+=============================
+
+FILE: assets/skotertyper.png
+WHY THE CURRENT ONE FAILS
+  Five sleds look almost the same. The lesson is track length and ski width.
+  Mountain must look long-tracked and narrow. Work sled must look utility.
+
+PROMPT
+  Photorealistic studio lineup of five clearly different snowmobiles on a
+  seamless beige background, three-quarter front-left view so tracks and ski
+  stance are obvious. Left to right:
+  1) Touring: two-up passenger seat with backrest, tall windshield, medium
+     track, wide ski stance.
+  2) Sport: low windshield, no passenger backrest, short track, sporty
+     crouched stance.
+  3) Mountain: no windshield, very long tall-lug track extending far behind
+     the tunnel, narrow ski stance, running boards, mountain handlebar.
+  4) Crossover: medium windshield, medium-long track, between sport and
+     mountain.
+  5) Utility / work: extra-wide track, cargo box on the tunnel, hitch,
+     tall windshield, heavier stance.
+  Differences in track length and ski width must be obvious at a glance.
+  No text, no arrows, no watermark. 16:9.
+
+
+FILE: assets/skoterns-delar.png
+WHY THE CURRENT ONE FAILS
+  Usable, but generic. Need a clean side view with all main parts visible
+  so you can label ski, hood, handlebar, seat, tunnel, track, tail light.
+
+PROMPT
+  Photorealistic studio side view of a modern dark-green snowmobile, full
+  machine visible from ski tip to tail light, facing left. Cream background.
+  Skis, hood, handlebars, windshield, seat, running boards, tunnel, drive
+  track with visible paddles, and red tail light all clearly separated.
+  Even lighting, no rider, no text, no watermark. 16:9.
+
+
+FILE: assets/skoter-motor.png
+WHY THE CURRENT ONE FAILS
+  Hood is open but the engine looks like a car engine, not a snowmobile
+  motor with CVT / clutch area.
+
+PROMPT
+  Photorealistic studio three-quarter view of the same dark-green snowmobile
+  with the hood fully open, showing a real snowmobile two-stroke or
+  four-stroke engine bay: airbox, exhaust, coolant hoses, and the primary
+  CVT clutch visible, not a car engine. Cream background. Hood lid clearly
+  lifted. No text, no watermark. 16:9.
+
+
+FILE: assets/skoter-reglage.png
+WHY THE CURRENT ONE FAILS
+  Right side looks like a motorcycle brake lever. A snowmobile throttle is
+  a thumb lever on the RIGHT. Kill switch / tether must be obvious.
+
+PROMPT
+  Photorealistic close-up of a modern snowmobile handlebar from the rider’s
+  viewpoint, studio lighting, cream background. LEFT handgrip: brake lever
+  for the fingers. RIGHT handgrip: thumb throttle lever under the thumb,
+  NOT a second brake lever. A coiled emergency kill-switch tether cord
+  clipped to the right side of the console, with a red stop button nearby.
+  Center pod with simple gauges. No text, no watermark. 16:9.
+
+
+FILE: assets/kamhojd.png
+  Not AI. Keep the side-view track diagram (25 / 39 / 75 mm paddles).
+  If you redraw it, do it as a diagram, not a photo.
+
+
+CHAPTER 2 — Miljö och natur
+===========================
+
+FILE: assets/avgaser-service.png
+WHY THE CURRENT ONE FAILS
+  “Worn” sled is only muddy. The lesson is a badly serviced machine that
+  smokes more, not a dirty one.
+
+PROMPT
+  Photorealistic two-panel studio comparison, cream background.
+  LEFT: clean, well-serviced black snowmobile, no exhaust smoke, glossy
+  plastics, intact track.
+  RIGHT: same model but mechanically worn: dry cracked plastics, sagging
+  track, oil stains, a thick grey exhaust plume from the muffler, not just
+  dirt on the hood.
+  Same camera height. No text, no watermark. 16:9.
+
+
+FILE: assets/renar-omvag.png
+WHY THE CURRENT ONE FAILS
+  Direction is almost right (turning away) but the herd is a perfect line
+  of clones. Rider should clearly be turning AWAY, not approaching.
+
+PROMPT
+  Photorealistic Swedish mountain winter. A rider in a black helmet and
+  jacket on a dark snowmobile is completing a U-turn AWAY from a scattered
+  reindeer herd in the middle distance. Fresh curved track in the snow
+  shows the turn. Reindeer look like real reindeer of mixed sizes, not
+  identical copies, walking away from the machine. Overcast Härjedalen
+  hills, sparse birch. No text, no watermark. 16:9.
+
+
+CHAPTER 3 — Trafikregler
+========================
+
+FILE: assets/ledkryss-roda.png
+WHY THE CURRENT ONE IS WEAK
+  Looks okay, but it must read as a Swedish winter trail cross, not a
+  railway crossing. One red X on a wooden post. No snowmobile disc.
+
+PROMPT
+  Photorealistic Swedish mountain plateau in winter, overcast. A weathered
+  wooden post with a red painted X (Swedish winter trail marker / ledkryss)
+  standing in snow. No road-sign disc, no snowmobile symbol, no railway
+  barriers. Distant fells. No text, no watermark. 4:3 or 16:9.
+
+
+FILE: assets/ledkryss-tva-marken.png
+WHY THE CURRENT ONE IS WEAK
+  The blue disc is a simplified sled without a rider. Real D9 is a blue
+  circle with a white snowmobile AND rider.
+
+PROMPT
+  Same Swedish winter trail post, but TWO markers together: a red wooden X
+  on top, and below it a round blue mandatory snowmobile-trail sign with a
+  white pictogram of a person on a snowmobile (Swedish D9 style). Do not
+  invent a new sign. Mountain background. No extra text. 4:3 or 16:9.
+
+
+Official signs — do not AI-generate:
+  marke-pabjuden-skoterled.png
+  marke-forbud-skoter.png
+  marke-forbud-gang-skidor.png
+  vagmarken-former.png
+Use Transportstyrelsen artwork (Wikimedia, public domain).
+
+
+CHAPTER 5 — Trafiksäkerhet
+==========================
+
+FILE: assets/skra-nedfor-fallkniv.png
+  Generate as THREE separate photos, then put them in a row.
+
+PANEL 1 — sidehill / skrå
+WHY IT MUST SHOW THIS
+  Rider weight INTO the slope (uphill / mountain side), not sitting
+  neutrally.
+
+PROMPT
+  Photorealistic snowmobile traversing a steep snow slope from left to
+  right. Rider in black helmet leans the body UPHILL into the mountain,
+  not downhill. Machine is on a clear sidehill. Swedish fells. No text. 1:1.
+
+PANEL 2 — icy downhill
+WHY IT MUST SHOW THIS
+  Going downhill on a shiny icy track, slight forward motion / throttle,
+  not locked-up or airborne.
+
+PROMPT
+  Photorealistic snowmobile coming toward the camera down a narrow icy
+  packed trail, slight spray from the track showing it is still turning.
+  Rider in black helmet, weight slightly back, controlled speed. Swedish
+  mountains. No text. 1:1.
+
+PANEL 3 — jackknife / fällkniv
+WHY THE CURRENT ONE IS WEAK
+  The pulk has swung around, which is good, but the hitch looks broken
+  and the pulk sits beside the skis. Need a clear fold: pulk coming
+  alongside the snowmobile, hitch bent about 90 degrees.
+
+PROMPT
+  Photorealistic overhead three-quarter view of a snowmobile on a snow
+  slope with a black plastic pulk jackknifing: the pulk has swung almost
+  parallel to the snowmobile, hitch folded about 90 degrees, pulk coming
+  up alongside the track. Rider looking back at the folding sled. This
+  is the dangerous jackknife, not a pulk tracking straight. No text. 16:9.
+
+
+FILE: assets/isdubbar.png
+WHY THE CURRENT ONE FAILS
+  The “ice picks” look like daggers / stilettos. Real Swedish ice claws
+  (isdubbar) are two short handled spikes on a cord around the neck,
+  handles on the chest, spikes pointing down.
+
+PROMPT
+  Photorealistic winter portrait of a snowmobile rider in a black helmet
+  and jacket, standing in snow. Around the neck, a cord with two real
+  Swedish ice-rescue claws (isdubbar): short black handles on the chest,
+  metal spikes pointing downward, ready to grab. Not knives, not ice axes,
+  not in a backpack. Hands in pockets. No text. 16:9.
+
+
+FILE: assets/bromsstracka-dubbel-fart.png
+  Not AI. Keep the 1× vs 4× bar diagram.
+
+
+CHAPTER 6 — Människan
+=====================
+
+FILE: assets/bipacksedel.png
+WHY THE CURRENT ONE FAILS
+  Fake Swedish is garbled. Triangle is a GHS diamond. The lesson is:
+  read the package leaflet, do not only look for a red triangle.
+
+PROMPT
+  Photorealistic product photo on a beige table. A generic white medicine
+  carton labelled only “Exempelmedicin” and “tabletter”, small red warning
+  triangle in one corner (not the main subject). Next to it an open
+  Swedish-style package leaflet (bipacksedel) that is the visual focus,
+  with a clear heading “Körförmåga” among other sections. No real brand
+  (no Sandoz, no Paracetamol brand). Soft daylight. No watermark. 16:9.
+
+
+CHAPTER 8 — Praktik
+===================
+
+FILE: assets/korstallningar.png
+  Generate as FOUR separate photos on a white studio background, same
+  dark-green snowmobile, same rider in black helmet and black suit.
+  Full machine visible in every panel.
+
+PANEL 1 — sitting
+PROMPT
+  Rider sitting normally on the seat, both feet on the running boards,
+  looking forward. Side view, white background. No text.
+
+PANEL 2 — kneeling
+PROMPT
+  Rider kneeling on the seat, one knee on the seat, torso higher than
+  sitting, looking forward. Side view, white background. No text.
+
+PANEL 3 — standing
+PROMPT
+  Rider STANDING on the running boards, knees bent, buttocks clearly off
+  the seat, looking forward. Side view, white background. No text.
+
+PANEL 4 — reversing on knees, looking back
+WHY THIS IS THE HARD ONE
+  Current panel 4 still looks like kneeling facing forward. Exam pose:
+  on the knees AND looking rearward.
+
+PROMPT
+  Rider kneeling on the seat of a snowmobile, torso twisted, looking back
+  over the left shoulder toward the rear while reversing, one hand on the
+  handlebar. Side or three-quarter view so the turned head is obvious.
+  White background. Full snowmobile visible. No text.
+
+
+FILE: assets/fastkord-skoter.png
+WHY THE CURRENT ONE IS WEAK
+  Sled is sitting on snow, not obviously stuck. Helmet off is good.
+  Need the machine buried / hung up, and digging AROUND it, not just
+  posing with a shovel.
+
+PROMPT
+  Photorealistic Swedish spruce forest in winter. A dark snowmobile is
+  stuck: track buried in deep snow, not sitting cleanly on the surface.
+  A man in a winter jacket (beanie, no helmet) kneels beside it and
+  shovels snow FROM IN FRONT, BEHIND AND THE SIDES of the track. A
+  black helmet lies on the snow away from the machine. Engine looks
+  off. No full-throttle spray. No text. 16:9.
+
+
+UNUSED IN THE CURRENT BOOK (still in assets)
+============================================
+
+FILE: assets/luftvag-chock.png
+  Two-panel first aid if you put it back in chapter 7.
+
+PANEL 1
+  Photorealistic winter scene. A helper kneels beside an unconscious
+  person in a jacket on snow and performs a clear head-tilt chin-lift:
+  one hand on the forehead, two fingers under the chin, head tilted back,
+  mouth slightly open. Not a neutral head. No text.
+
+PANEL 2
+  A conscious pale person sitting wrapped in a grey wool blanket. A
+  helper kneels beside them talking calmly. No food, no drink. Winter
+  landscape. No text.
+
+
+HOW TO DROP NEW IMAGES INTO THE BOOK
+====================================
+1. Export PNG, 1280×720 if possible (signs can stay square).
+2. Replace the file with the same name in assets/.
+3. Rebuild:
+     .venv/bin/python verktyg/md_till_pdf.py
+)
